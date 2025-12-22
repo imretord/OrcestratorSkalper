@@ -1,0 +1,57 @@
+trading:
+  symbols:
+    # Tier 0: Major pairs (high liquidity, lower volatility)
+    - BTCUSDT
+    - ETHUSDT
+    - BNBUSDT
+    # Tier 1: Low minimums, high liquidity
+    - DOGEUSDT
+    - XRPUSDT
+    - ADAUSDT
+    - 1000PEPEUSDT
+    - TRXUSDT
+    - POLUSDT
+    # Tier 2: Medium minimums, good volatility
+    - DOTUSDT
+    - LINKUSDT
+    - AVAXUSDT
+    - NEARUSDT
+    # Tier 3: Popular alts
+    - SUIUSDT
+    - APTUSDT
+    - ARBUSDT
+    - OPUSDT
+    - WIFUSDT
+  capital: 200
+  max_exposure_pct: 50
+  max_position_pct: 20
+  max_daily_loss_pct: 5
+  max_positions: 10
+  leverage: 3  # Default leverage (conservative for learning phase)
+
+  # Position sizing
+  position_size_mode: fixed  # "fixed" or "dynamic"
+  position_size_pct: 2  # Fixed size as % of balance (when mode=fixed)
+
+binance:
+  testnet: false
+  api_key_env: BINANCE_API_KEY
+  api_secret_env: BINANCE_API_SECRET
+
+llm:
+  provider: groq
+  model: llama-3.1-70b-versatile
+  api_key_env: GROQ_API_KEY
+  fallback_provider: ollama
+  fallback_model: llama3.1:8b
+  temperature: 0.3
+  max_tokens: 1000
+
+telegram:
+  enabled: true
+  bot_token_env: TELEGRAM_BOT_TOKEN
+  chat_id_env: TELEGRAM_CHAT_ID
+
+logging:
+  level: INFO
+  file: logs/trading.log

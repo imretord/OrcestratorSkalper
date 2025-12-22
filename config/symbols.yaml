@@ -1,0 +1,95 @@
+# Symbol-specific configurations
+symbols:
+  # Tier 1: Low minimums, high liquidity
+  DOGEUSDT:
+    min_quantity: 1
+    price_precision: 5
+    quantity_precision: 0
+    min_notional: 5.0
+
+  XRPUSDT:
+    min_quantity: 0.1
+    price_precision: 4
+    quantity_precision: 1
+    min_notional: 5.0
+
+  ADAUSDT:
+    min_quantity: 1
+    price_precision: 4
+    quantity_precision: 0
+    min_notional: 5.0
+
+  1000PEPEUSDT:
+    min_quantity: 100
+    price_precision: 7
+    quantity_precision: 0
+    min_notional: 5.0
+
+  TRXUSDT:
+    min_quantity: 1
+    price_precision: 5
+    quantity_precision: 0
+    min_notional: 5.0
+
+  1000SHIBUSDT:
+    min_quantity: 1000
+    price_precision: 6
+    quantity_precision: 0
+    min_notional: 5.0
+
+  # Tier 2: Medium minimums, good volatility
+  DOTUSDT:
+    min_quantity: 0.1
+    price_precision: 3
+    quantity_precision: 1
+    min_notional: 5.0
+
+  LINKUSDT:
+    min_quantity: 0.1
+    price_precision: 3
+    quantity_precision: 1
+    min_notional: 5.0
+
+  AVAXUSDT:
+    min_quantity: 0.1
+    price_precision: 3
+    quantity_precision: 1
+    min_notional: 5.0
+
+  NEARUSDT:
+    min_quantity: 0.1
+    price_precision: 3
+    quantity_precision: 1
+    min_notional: 5.0
+
+  # Tier 3: Popular alts
+  SUIUSDT:
+    min_quantity: 0.1
+    price_precision: 4
+    quantity_precision: 1
+    min_notional: 5.0
+
+  APTUSDT:
+    min_quantity: 0.1
+    price_precision: 3
+    quantity_precision: 1
+    min_notional: 5.0
+
+  # Fallback for larger caps
+  SOLUSDT:
+    min_quantity: 0.01
+    price_precision: 2
+    quantity_precision: 2
+    min_notional: 5.0
+
+  ETHUSDT:
+    min_quantity: 0.001
+    price_precision: 2
+    quantity_precision: 3
+    min_notional: 5.0
+
+  BTCUSDT:
+    min_quantity: 0.001
+    price_precision: 1
+    quantity_precision: 3
+    min_notional: 5.0

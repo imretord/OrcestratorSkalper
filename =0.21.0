@@ -1,0 +1,17 @@
+Collecting river
+  Downloading river-0.23.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (9.2 kB)
+Requirement already satisfied: numpy>=1.23.0 in ./venv/lib/python3.12/site-packages (from river) (2.3.5)
+Requirement already satisfied: pandas<3.0.0,>=2.2.3 in ./venv/lib/python3.12/site-packages (from river) (2.3.3)
+Collecting scipy<2.0.0,>=1.14.1 (from river)
+  Downloading scipy-1.16.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (62 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.0/62.0 kB 2.8 MB/s eta 0:00:00
+Requirement already satisfied: python-dateutil>=2.8.2 in ./venv/lib/python3.12/site-packages (from pandas<3.0.0,>=2.2.3->river) (2.9.0.post0)
+Requirement already satisfied: pytz>=2020.1 in ./venv/lib/python3.12/site-packages (from pandas<3.0.0,>=2.2.3->river) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in ./venv/lib/python3.12/site-packages (from pandas<3.0.0,>=2.2.3->river) (2025.3)
+Requirement already satisfied: six>=1.5 in ./venv/lib/python3.12/site-packages (from python-dateutil>=2.8.2->pandas<3.0.0,>=2.2.3->river) (1.17.0)
+Downloading river-0.23.0-cp312-cp312-manylinux_2_28_x86_64.whl (3.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 8.9 MB/s eta 0:00:00
+Downloading scipy-1.16.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (35.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.7/35.7 MB 62.3 MB/s eta 0:00:00
+Installing collected packages: scipy, river
+Successfully installed river-0.23.0 scipy-1.16.3
