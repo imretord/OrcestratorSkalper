@@ -27881,3 +27881,1137 @@ Status:
 2025-12-22 14:23:04.279 | INFO     | core.trading_loop:_print_status:609 |   Cycle: 11 | Decisions: 198 | Trades: 4
 2025-12-22 14:23:04.288 | INFO     | core.trading_loop:_print_status:614 |   Today: 0W / 13L | $-4.26
 2025-12-22 14:23:04.289 | INFO     | core.trading_loop:run:188 | Sleeping 256s until next cycle...
+2025-12-22 14:30:31.108 | INFO     | core.trading_loop:run:154 | 
+==================================================
+2025-12-22 14:30:31.109 | INFO     | core.trading_loop:run:155 | Cycle #12 - 14:30:31 UTC
+2025-12-22 14:30:31.109 | INFO     | core.trading_loop:run:156 | ==================================================
+2025-12-22 14:30:33.430 | INFO     | core.trading_loop:_update_positions:300 | Open Positions:
+2025-12-22 14:30:33.430 | INFO     | core.trading_loop:_update_positions:304 |   ETHUSDT: LONG @ $3034.2000 | Current: $3052.1700 | PnL: +0.59%
+2025-12-22 14:30:33.431 | INFO     | core.trading_loop:_update_positions:304 |   BNBUSDT: LONG @ $865.1100 | Current: $866.8700 | PnL: +0.20%
+2025-12-22 14:30:33.431 | INFO     | core.trading_loop:_update_positions:304 |   DOGEUSDT: LONG @ $0.1322 | Current: $0.1333 | PnL: +0.86%
+2025-12-22 14:30:33.431 | INFO     | core.trading_loop:_update_positions:304 |   ADAUSDT: LONG @ $0.3735 | Current: $0.3746 | PnL: +0.29%
+2025-12-22 14:30:33.431 | INFO     | core.trading_loop:_update_positions:304 |   TRXUSDT: SHORT @ $0.2876 | Current: $0.2833 | PnL: +1.48% [TRAILING]
+2025-12-22 14:30:33.431 | INFO     | core.trading_loop:_update_positions:304 |   DOTUSDT: LONG @ $1.8160 | Current: $1.8320 | PnL: +0.88%
+2025-12-22 14:30:33.431 | INFO     | core.trading_loop:_update_positions:304 |   APTUSDT: LONG @ $1.6181 | Current: $1.6300 | PnL: +0.74%
+2025-12-22 14:30:33.431 | INFO     | core.trading_loop:_update_positions:304 |   ARBUSDT: LONG @ $0.1896 | Current: $0.1901 | PnL: +0.26%
+2025-12-22 14:30:33.432 | INFO     | core.trading_loop:_update_positions:304 |   XRPUSDT: LONG @ $1.9330 | Current: $1.9343 | PnL: +0.07%
+2025-12-22 14:30:43.488 | INFO     | sensors.aggregator:collect_all:76 | [Aggregator] Collected 18/18 symbols in 4.90s
+2025-12-22 14:30:44.793 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] ETHUSDT confidence too low: 0.64 < 0.7
+2025-12-22 14:30:44.793 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for ETHUSDT
+2025-12-22 14:30:45.723 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] DOGEUSDT confidence too low: 0.64 < 0.7
+2025-12-22 14:30:45.724 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for DOGEUSDT
+2025-12-22 14:30:46.652 | INFO     | agents.trend_follower:analyze:148 | [TrendFollower] Signal generated for TRXUSDT: SHORT @ 0.28, conf=1.00
+2025-12-22 14:30:46.652 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] TrendFollower generated signal: SHORT TRXUSDT @ 1.00
+2025-12-22 14:30:46.653 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for TRXUSDT
+2025-12-22 14:30:47.605 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] DOTUSDT confidence too low: 0.64 < 0.7
+2025-12-22 14:30:47.605 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for DOTUSDT
+2025-12-22 14:30:48.531 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for APTUSDT: LONG @ 1.63, conf=0.80
+2025-12-22 14:30:48.531 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG APTUSDT @ 0.80
+2025-12-22 14:30:48.531 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for APTUSDT
+2025-12-22 14:30:48.542 | INFO     | core.trading_loop:_analyze_and_decide:416 | Collecting market data...
+2025-12-22 14:30:52.844 | INFO     | sensors.aggregator:collect_all:76 | [Aggregator] Collected 18/18 symbols in 4.30s
+2025-12-22 14:30:53.255 | INFO     | core.trading_loop:stop:797 | Stop requested...
+2025-12-22 14:30:53.256 | INFO     | storage.state_persistence:save_full_state:201 | [StatePersistence] Full state saved
+2025-12-22 14:30:53.729 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+BTCUSDT: $90060.5000 | Regime: compression | Bias: long
+2025-12-22 14:30:54.270 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing BTCUSDT - Regime: compression, Price: $90060.50
+2025-12-22 14:30:54.271 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] BTCUSDT confidence too low: 0.66 < 0.7
+2025-12-22 14:30:54.271 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for BTCUSDT
+2025-12-22 14:30:54.272 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for BTCUSDT
+2025-12-22 14:30:54.272 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:30:54.272 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:30:54.272 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:30:54.272 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:30:54.273 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+ETHUSDT: $3059.5000 | Regime: compression | Bias: long
+2025-12-22 14:30:54.795 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing ETHUSDT - Regime: compression, Price: $3059.50
+2025-12-22 14:30:54.796 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] ETHUSDT confidence too low: 0.64 < 0.7
+2025-12-22 14:30:54.798 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for ETHUSDT
+2025-12-22 14:30:54.798 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for ETHUSDT
+2025-12-22 14:30:54.798 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:30:54.798 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:30:54.799 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:30:54.799 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:30:55.873 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+BNBUSDT: $867.6600 | Regime: compression | Bias: long
+2025-12-22 14:30:56.413 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing BNBUSDT - Regime: compression, Price: $867.66
+2025-12-22 14:30:56.413 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] BNBUSDT confidence too low: 0.64 < 0.7
+2025-12-22 14:30:56.414 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for BNBUSDT
+2025-12-22 14:30:56.414 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for BNBUSDT
+2025-12-22 14:30:56.414 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:30:56.414 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:30:56.414 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:30:56.414 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:30:56.415 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+DOGEUSDT: $0.1336 | Regime: compression | Bias: long
+2025-12-22 14:30:56.938 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing DOGEUSDT - Regime: compression, Price: $0.13
+2025-12-22 14:30:56.939 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] DOGEUSDT confidence too low: 0.64 < 0.7
+2025-12-22 14:30:56.940 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for DOGEUSDT
+2025-12-22 14:30:56.941 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for DOGEUSDT
+2025-12-22 14:30:56.941 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:30:56.941 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:30:56.941 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:30:56.942 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:30:57.874 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+XRPUSDT: $1.9362 | Regime: compression | Bias: long
+2025-12-22 14:30:58.404 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing XRPUSDT - Regime: compression, Price: $1.94
+2025-12-22 14:30:58.405 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] XRPUSDT confidence too low: 0.64 < 0.7
+2025-12-22 14:30:58.407 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for XRPUSDT
+2025-12-22 14:30:58.407 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for XRPUSDT
+2025-12-22 14:30:58.407 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:30:58.408 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:30:58.408 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:30:58.408 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:30:59.305 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+ADAUSDT: $0.3759 | Regime: strong_uptrend | Bias: long
+2025-12-22 14:30:59.828 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing ADAUSDT - Regime: strong_uptrend, Price: $0.38
+2025-12-22 14:30:59.829 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for ADAUSDT
+2025-12-22 14:30:59.829 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for ADAUSDT
+2025-12-22 14:30:59.830 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:30:59.830 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:30:59.830 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:30:59.830 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:31:00.781 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+1000PEPEUSDT: $0.0040 | Regime: compression | Bias: long
+2025-12-22 14:31:01.311 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing 1000PEPEUSDT - Regime: compression, Price: $0.00
+2025-12-22 14:31:01.312 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] 1000PEPEUSDT confidence too low: 0.62 < 0.7
+2025-12-22 14:31:01.313 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for 1000PEPEUSDT
+2025-12-22 14:31:01.313 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for 1000PEPEUSDT
+2025-12-22 14:31:01.314 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:31:01.314 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:31:01.314 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:31:01.315 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:31:01.315 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+TRXUSDT: $0.2835 | Regime: strong_downtrend | Bias: short
+2025-12-22 14:31:01.845 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing TRXUSDT - Regime: strong_downtrend, Price: $0.28
+2025-12-22 14:31:01.846 | INFO     | agents.trend_follower:analyze:148 | [TrendFollower] Signal generated for TRXUSDT: SHORT @ 0.28, conf=1.00
+2025-12-22 14:31:01.847 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] TrendFollower generated signal: SHORT TRXUSDT @ 1.00
+2025-12-22 14:31:01.847 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for TRXUSDT
+2025-12-22 14:31:01.848 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for TRXUSDT
+2025-12-22 14:31:01.848 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:31:01.849 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:31:01.850 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:31:01.850 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already SHORT on TRXUSDT
+2025-12-22 14:31:02.799 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+POLUSDT: $0.1095 | Regime: strong_uptrend | Bias: long
+2025-12-22 14:31:03.335 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing POLUSDT - Regime: strong_uptrend, Price: $0.11
+2025-12-22 14:31:03.337 | INFO     | agents.trend_follower:analyze:148 | [TrendFollower] Signal generated for POLUSDT: LONG @ 0.11, conf=0.70
+2025-12-22 14:31:03.338 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] TrendFollower generated signal: LONG POLUSDT @ 0.70
+2025-12-22 14:31:03.338 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for POLUSDT
+2025-12-22 14:31:03.339 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for POLUSDT
+2025-12-22 14:31:03.339 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:31:03.339 | INFO     | orchestrator.decision_maker:make_decision:182 | [FILTER] POLUSDT: ML UNFAVORABLE penalty applied (0.70 → 0.55)
+2025-12-22 14:31:03.340 | INFO     | orchestrator.decision_maker:make_decision:195 | [FILTER] POLUSDT rejected: effective confidence 0.55 < 0.6 (ML penalty)
+2025-12-22 14:31:03.341 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.80)
+2025-12-22 14:31:03.341 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:31:03.342 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals meet quality criteria
+2025-12-22 14:31:03.343 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+DOTUSDT: $1.8340 | Regime: compression | Bias: long
+2025-12-22 14:31:03.860 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing DOTUSDT - Regime: compression, Price: $1.83
+2025-12-22 14:31:03.861 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] DOTUSDT confidence too low: 0.64 < 0.7
+2025-12-22 14:31:03.861 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for DOTUSDT
+2025-12-22 14:31:03.862 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for DOTUSDT
+2025-12-22 14:31:03.862 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:31:03.862 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:31:03.862 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:31:03.862 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:31:04.805 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+LINKUSDT: $12.7380 | Regime: compression | Bias: long
+2025-12-22 14:31:05.328 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing LINKUSDT - Regime: compression, Price: $12.74
+2025-12-22 14:31:05.329 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] LINKUSDT confidence too low: 0.64 < 0.7
+2025-12-22 14:31:05.329 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for LINKUSDT
+2025-12-22 14:31:05.330 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for LINKUSDT
+2025-12-22 14:31:05.330 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:31:05.330 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:31:05.330 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:31:05.330 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:31:06.224 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+AVAXUSDT: $12.3630 | Regime: compression | Bias: long
+2025-12-22 14:31:06.754 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing AVAXUSDT - Regime: compression, Price: $12.36
+2025-12-22 14:31:06.756 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] AVAXUSDT confidence too low: 0.64 < 0.7
+2025-12-22 14:31:06.757 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for AVAXUSDT
+2025-12-22 14:31:06.757 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for AVAXUSDT
+2025-12-22 14:31:06.757 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:31:06.758 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:31:06.758 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:31:06.759 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:31:07.730 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+NEARUSDT: $1.5780 | Regime: strong_uptrend | Bias: long
+2025-12-22 14:31:08.255 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing NEARUSDT - Regime: strong_uptrend, Price: $1.58
+2025-12-22 14:31:08.256 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for NEARUSDT
+2025-12-22 14:31:08.256 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for NEARUSDT
+2025-12-22 14:31:08.256 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:31:08.256 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:31:08.257 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:31:08.257 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:31:09.138 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+SUIUSDT: $1.4798 | Regime: compression | Bias: long
+2025-12-22 14:31:09.667 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing SUIUSDT - Regime: compression, Price: $1.48
+2025-12-22 14:31:09.668 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] SUIUSDT confidence too low: 0.64 < 0.7
+2025-12-22 14:31:09.669 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for SUIUSDT
+2025-12-22 14:31:09.669 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for SUIUSDT
+2025-12-22 14:31:09.669 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:31:09.669 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:31:09.670 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:31:09.670 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:31:09.670 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+APTUSDT: $1.6328 | Regime: compression | Bias: long
+2025-12-22 14:31:10.201 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing APTUSDT - Regime: compression, Price: $1.63
+2025-12-22 14:31:10.203 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for APTUSDT: LONG @ 1.63, conf=0.80
+2025-12-22 14:31:10.204 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG APTUSDT @ 0.80
+2025-12-22 14:31:10.204 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for APTUSDT
+2025-12-22 14:31:10.205 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for APTUSDT
+2025-12-22 14:31:10.205 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:31:10.206 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:31:10.206 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:31:10.207 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on APTUSDT
+2025-12-22 14:31:11.172 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+ARBUSDT: $0.1907 | Regime: compression | Bias: long
+2025-12-22 14:31:11.763 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing ARBUSDT - Regime: compression, Price: $0.19
+2025-12-22 14:31:11.765 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] ARBUSDT confidence too low: 0.64 < 0.7
+2025-12-22 14:31:11.765 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for ARBUSDT
+2025-12-22 14:31:11.766 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for ARBUSDT
+2025-12-22 14:31:11.766 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:31:11.766 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:31:11.767 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:31:11.767 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:31:12.698 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+OPUSDT: $0.2775 | Regime: compression | Bias: long
+2025-12-22 14:31:13.252 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing OPUSDT - Regime: compression, Price: $0.28
+2025-12-22 14:31:13.254 | INFO     | agents.breakout_catcher:analyze:110 | [BreakoutCatcher] OPUSDT confidence too low: 0.64 < 0.7
+2025-12-22 14:31:13.254 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for OPUSDT
+2025-12-22 14:31:13.255 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for OPUSDT
+2025-12-22 14:31:13.255 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:31:13.255 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:31:13.256 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:31:13.256 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:31:14.205 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+WIFUSDT: $0.3394 | Regime: ranging | Bias: long
+2025-12-22 14:31:14.732 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing WIFUSDT - Regime: ranging, Price: $0.34
+2025-12-22 14:31:14.733 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for WIFUSDT
+2025-12-22 14:31:14.733 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for WIFUSDT
+2025-12-22 14:31:14.733 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:31:14.734 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:31:14.734 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:31:14.734 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:31:14.999 | INFO     | core.trading_loop:_print_status:604 | 
+Status:
+2025-12-22 14:31:14.999 | INFO     | core.trading_loop:_print_status:605 |   Balance: $436.05
+2025-12-22 14:31:15.000 | INFO     | core.trading_loop:_print_status:606 |   Exposure: $138.54 (31.8%)
+2025-12-22 14:31:15.000 | INFO     | core.trading_loop:_print_status:607 |   Unrealized PnL: $+0.68
+2025-12-22 14:31:15.000 | INFO     | core.trading_loop:_print_status:608 |   Open positions: 9
+2025-12-22 14:31:15.000 | INFO     | core.trading_loop:_print_status:609 |   Cycle: 12 | Decisions: 216 | Trades: 4
+2025-12-22 14:31:15.005 | INFO     | core.trading_loop:_print_status:614 |   Today: 0W / 13L | $-4.26
+2025-12-22 14:31:15.005 | INFO     | core.trading_loop:_shutdown:767 | Trading Loop shutting down...
+2025-12-22 14:31:15.218 | INFO     | orchestrator.orchestrator:close:377 | [Orchestrator] Closed
+2025-12-22 14:31:15.218 | INFO     | core.trading_loop:_shutdown:793 | Trading Loop stopped.
+2025-12-22 14:31:15.219 | INFO     | storage.state_persistence:save_full_state:201 | [StatePersistence] Full state saved
+2025-12-22 14:33:37.884 | INFO     | core.logger:setup_logger:89 | Logger initialized: file=logs/trading.log, level=INFO
+2025-12-22 14:33:37.903 | INFO     | execution.binance_client:__init__:69 | Using Binance MAINNET
+2025-12-22 14:33:38.185 | INFO     | execution.binance_client:connect:100 | Time synchronized: offset=-125ms
+2025-12-22 14:33:39.594 | INFO     | execution.binance_client:connect:129 | Loaded 609 USDT-M Futures markets
+2025-12-22 14:33:40.106 | INFO     | execution.binance_client:connect:143 | Connected to Binance Futures. Balance: $435.00 USDT
+2025-12-22 14:33:40.622 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for BTCUSDT: 3x
+2025-12-22 14:33:40.879 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for ETHUSDT: 3x
+2025-12-22 14:33:41.135 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for BNBUSDT: 3x
+2025-12-22 14:33:41.391 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for DOGEUSDT: 3x
+2025-12-22 14:33:41.656 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for XRPUSDT: 3x
+2025-12-22 14:33:41.911 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for ADAUSDT: 3x
+2025-12-22 14:33:42.166 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for 1000PEPEUSDT: 3x
+2025-12-22 14:33:42.423 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for TRXUSDT: 3x
+2025-12-22 14:33:42.679 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for POLUSDT: 3x
+2025-12-22 14:33:42.934 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for DOTUSDT: 3x
+2025-12-22 14:33:43.187 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for LINKUSDT: 3x
+2025-12-22 14:33:43.443 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for AVAXUSDT: 3x
+2025-12-22 14:33:43.703 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for NEARUSDT: 3x
+2025-12-22 14:33:43.958 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for SUIUSDT: 3x
+2025-12-22 14:33:44.214 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for APTUSDT: 3x
+2025-12-22 14:33:44.472 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for ARBUSDT: 3x
+2025-12-22 14:33:44.726 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for OPUSDT: 3x
+2025-12-22 14:33:44.980 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for WIFUSDT: 3x
+2025-12-22 14:33:44.980 | INFO     | sensors.aggregator:__init__:52 | [Aggregator] Initialized with 18 symbols
+2025-12-22 14:33:44.983 | INFO     | learners.experience_buffer:_load_from_disk:500 | [ExperienceBuffer] Loaded 30 experiences from disk
+2025-12-22 14:33:44.983 | INFO     | learners.experience_buffer:__init__:72 | [ExperienceBuffer] Initialized with capacity=500, loaded=30
+2025-12-22 14:33:44.984 | INFO     | learners.online_predictor:__init__:82 | [OnlinePredictor] Initialized with model_type=ensemble
+2025-12-22 14:33:44.998 | INFO     | learners.online_predictor:learn_from_buffer:352 | [OnlinePredictor] Learned from 30 buffered experiences
+2025-12-22 14:33:44.998 | INFO     | __main__:run_trading:1022 | [Startup] Predictor trained on 30 historical experiences
+2025-12-22 14:33:44.998 | INFO     | learners.meta_learner:__init__:94 | [MetaLearner] Initialized
+2025-12-22 14:33:44.999 | INFO     | core.position_tracker:__init__:55 | [PositionTracker] Initialized with max_positions=15
+2025-12-22 14:33:44.999 | INFO     | core.trade_executor:__init__:86 | [TradeExecutor] Initialized in NORMAL mode
+2025-12-22 14:33:44.999 | INFO     | storage.trade_journal:__init__:47 | [TradeJournal] Initialized at data/journal
+2025-12-22 14:33:45.002 | INFO     | storage.state_persistence:_load:55 | [StatePersistence] Loaded state from data/state.json
+2025-12-22 14:33:45.002 | INFO     | storage.state_persistence:__init__:47 | [StatePersistence] Initialized at data/state.json
+2025-12-22 14:33:45.003 | INFO     | notifications.telegram:__init__:60 | [TELEGRAM] Initialized: chat_id=-1003367305013
+2025-12-22 14:33:45.003 | INFO     | agents.base_agent:__init__:85 | [TrendFollower] Initialized: Trades pullbacks in trending markets
+2025-12-22 14:33:45.004 | INFO     | agents.base_agent:__init__:85 | [MeanReversion] Initialized: Fades extremes in ranging/choppy markets
+2025-12-22 14:33:45.004 | INFO     | agents.base_agent:__init__:85 | [BreakoutCatcher] Initialized: Catches breakouts from compression
+2025-12-22 14:33:45.004 | INFO     | agents.agent_manager:_init_agents:82 | [AgentManager] Agents initialized: ['TrendFollower', 'MeanReversion', 'BreakoutCatcher']
+2025-12-22 14:33:45.005 | INFO     | agents.agent_manager:__init__:60 | [AgentManager] Initialized with 3 agents
+2025-12-22 14:33:45.005 | INFO     | orchestrator.decision_maker:__init__:110 | [RulesDecisionMaker] Initialized with max_exposure=500.0, min_confidence=0.6, size_mode=fixed, size_pct=2%, leverage=3x
+2025-12-22 14:33:45.005 | INFO     | orchestrator.orchestrator:__init__:107 | [Orchestrator] Using rules-based decision maker only
+2025-12-22 14:33:45.005 | INFO     | orchestrator.risk_guardian:__init__:89 | [RiskGuardian] Initialized - max_exposure=$500.0, max_position=20.0%, min_rr=1.0
+2025-12-22 14:33:45.006 | INFO     | orchestrator.orchestrator:__init__:124 | [Orchestrator] Initialized - LLM: False, Max exposure: $500.0
+2025-12-22 14:33:45.006 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: ETHUSDT
+2025-12-22 14:33:45.006 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: BNBUSDT
+2025-12-22 14:33:45.007 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: DOGEUSDT
+2025-12-22 14:33:45.007 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: ADAUSDT
+2025-12-22 14:33:45.007 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: TRXUSDT
+2025-12-22 14:33:45.008 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: DOTUSDT
+2025-12-22 14:33:45.008 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: APTUSDT
+2025-12-22 14:33:45.008 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: ARBUSDT
+2025-12-22 14:33:45.009 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: XRPUSDT
+2025-12-22 14:33:45.009 | INFO     | storage.state_persistence:load_positions:109 | [StatePersistence] Restored 9 positions
+2025-12-22 14:33:45.009 | INFO     | core.trading_loop:__init__:90 | [TradingLoop] Initialized with 18 symbols, interval=300s
+2025-12-22 14:33:45.279 | INFO     | core.trading_loop:run:100 | ============================================================
+2025-12-22 14:33:45.279 | INFO     | core.trading_loop:run:101 | Trading Loop Started
+2025-12-22 14:33:45.279 | INFO     | core.trading_loop:run:102 | Mode: NORMAL
+2025-12-22 14:33:45.280 | INFO     | core.trading_loop:run:103 | Symbols: BTCUSDT, ETHUSDT, BNBUSDT, DOGEUSDT, XRPUSDT, ADAUSDT, 1000PEPEUSDT, TRXUSDT, POLUSDT, DOTUSDT, LINKUSDT, AVAXUSDT, NEARUSDT, SUIUSDT, APTUSDT, ARBUSDT, OPUSDT, WIFUSDT
+2025-12-22 14:33:45.280 | INFO     | core.trading_loop:run:104 | Interval: 300s
+2025-12-22 14:33:45.280 | INFO     | core.trading_loop:run:105 | ============================================================
+2025-12-22 14:33:45.281 | INFO     | core.trading_loop:run:108 | Syncing positions with exchange...
+2025-12-22 14:33:45.549 | INFO     | core.position_tracker:sync_with_exchange:744 | [PositionTracker] Sync complete. Synced: 9, Phantom removed: 0, Discrepancies fixed: 0
+2025-12-22 14:33:45.550 | INFO     | core.trading_loop:run:114 | Cleaning up orphan and wrong-direction orders...
+2025-12-22 14:33:45.818 | INFO     | core.position_tracker:cleanup_orphan_orders:1114 | [OrphanCleanup] Real positions: ['TRXUSDT', 'POLUSDT', 'DOTUSDT', 'APTUSDT', 'ETHUSDT', 'AVAXUSDT', 'BNBUSDT', 'DOGEUSDT', 'OPUSDT', 'XRPUSDT', 'ADAUSDT', 'ARBUSDT', 'NEARUSDT']
+2025-12-22 14:33:47.809 | INFO     | core.position_tracker:cleanup_orphan_orders:1128 | [OrphanCleanup] Found 18 total algo orders
+2025-12-22 14:33:47.810 | INFO     | core.position_tracker:cleanup_orphan_orders:1216 | [OrphanCleanup] No orphan or wrong-direction orders found
+2025-12-22 14:33:47.810 | INFO     | core.trading_loop:run:137 | Checking for unprotected exchange positions...
+2025-12-22 14:33:49.094 | WARNING  | core.position_tracker:discover_unprotected_positions:889 | [PositionTracker] UNPROTECTED: POLUSDT LONG 478.0000 @ $0.1091 - NO SL!
+2025-12-22 14:33:51.164 | WARNING  | core.position_tracker:discover_unprotected_positions:889 | [PositionTracker] UNPROTECTED: AVAXUSDT LONG 4.0000 @ $12.3575 - NO SL!
+2025-12-22 14:33:52.708 | WARNING  | core.position_tracker:discover_unprotected_positions:889 | [PositionTracker] UNPROTECTED: OPUSDT LONG 113.3000 @ $0.2768 - NO SL!
+2025-12-22 14:33:55.256 | WARNING  | core.position_tracker:discover_unprotected_positions:889 | [PositionTracker] UNPROTECTED: NEARUSDT LONG 13.0000 @ $1.5676 - NO SL!
+2025-12-22 14:33:55.256 | WARNING  | core.position_tracker:discover_unprotected_positions:894 | [PositionTracker] Found 4 unprotected positions!
+2025-12-22 14:33:55.257 | WARNING  | core.trading_loop:_protect_untracked_positions:703 | [Protection] Found 4 unprotected positions - adding SL orders
+2025-12-22 14:33:55.523 | INFO     | execution.binance_client:place_stop_loss:834 | Stop Loss created: SELL @ $0.10694 (algoId=1000000120305373)
+2025-12-22 14:33:55.523 | INFO     | core.trading_loop:_protect_untracked_positions:730 | [Protection] POLUSDT: Added SL @ $0.106943 for LONG 478.0000
+2025-12-22 14:33:56.169 | INFO     | execution.binance_client:place_stop_loss:834 | Stop Loss created: SELL @ $12.11 (algoId=1000000120305533)
+2025-12-22 14:33:56.170 | INFO     | core.trading_loop:_protect_untracked_positions:730 | [Protection] AVAXUSDT: Added SL @ $12.110350 for LONG 4.0000
+2025-12-22 14:33:57.435 | INFO     | execution.binance_client:place_stop_loss:834 | Stop Loss created: SELL @ $0.2713 (algoId=1000000120305798)
+2025-12-22 14:33:57.436 | INFO     | core.trading_loop:_protect_untracked_positions:730 | [Protection] OPUSDT: Added SL @ $0.271264 for LONG 113.3000
+2025-12-22 14:33:58.600 | INFO     | execution.binance_client:place_stop_loss:834 | Stop Loss created: SELL @ $1.536 (algoId=1000000120306050)
+2025-12-22 14:33:58.600 | INFO     | core.trading_loop:_protect_untracked_positions:730 | [Protection] NEARUSDT: Added SL @ $1.536263 for LONG 13.0000
+2025-12-22 14:33:59.640 | INFO     | core.trading_loop:run:143 | Running startup order health check...
+2025-12-22 14:33:59.640 | INFO     | core.trading_loop:_run_health_checks:626 | [HealthCheck] Running periodic health checks...
+2025-12-22 14:33:59.907 | INFO     | core.position_tracker:cleanup_orphan_orders:1114 | [OrphanCleanup] Real positions: ['TRXUSDT', 'POLUSDT', 'DOTUSDT', 'APTUSDT', 'ETHUSDT', 'AVAXUSDT', 'BNBUSDT', 'DOGEUSDT', 'OPUSDT', 'XRPUSDT', 'ADAUSDT', 'ARBUSDT', 'NEARUSDT']
+2025-12-22 14:34:01.897 | INFO     | core.position_tracker:cleanup_orphan_orders:1128 | [OrphanCleanup] Found 18 total algo orders
+2025-12-22 14:34:01.897 | INFO     | core.position_tracker:cleanup_orphan_orders:1216 | [OrphanCleanup] No orphan or wrong-direction orders found
+2025-12-22 14:34:02.408 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] ETHUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000117320598 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:34:02.409 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] ETHUSDT: Order found: id=1000000117320598, type=stop_market, side=sell, stop=$2983.640000
+2025-12-22 14:34:02.409 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] ETHUSDT: Order found: id=1000000117320647, type=take_profit_market, side=sell, stop=$3094.880000
+2025-12-22 14:34:02.409 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] ETHUSDT: Position is healthy
+2025-12-22 14:34:02.925 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] BNBUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000117321379 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:34:02.926 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] BNBUSDT: Order found: id=1000000117321379, type=stop_market, side=sell, stop=$854.680000
+2025-12-22 14:34:02.926 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] BNBUSDT: Order found: id=1000000117321424, type=take_profit_market, side=sell, stop=$877.630000
+2025-12-22 14:34:02.926 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] BNBUSDT: Position is healthy
+2025-12-22 14:34:03.927 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] DOGEUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000117450351 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:34:03.928 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] DOGEUSDT: Order found: id=1000000117450351, type=stop_market, side=sell, stop=$0.129620
+2025-12-22 14:34:03.928 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] DOGEUSDT: Order found: id=1000000117450392, type=take_profit_market, side=sell, stop=$0.135200
+2025-12-22 14:34:03.928 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] DOGEUSDT: Position is healthy
+2025-12-22 14:34:05.422 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] ADAUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000119166786 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:34:05.422 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] ADAUSDT: Order found: id=1000000119166786, type=stop_market, side=sell, stop=$0.366800
+2025-12-22 14:34:05.422 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] ADAUSDT: Order found: id=1000000119166859, type=take_profit_market, side=sell, stop=$0.381500
+2025-12-22 14:34:05.422 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] ADAUSDT: Position is healthy
+2025-12-22 14:34:06.427 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] TRXUSDT: Checking position | Side: SHORT | TP1 hit: True | SL order ID: 1000000117451842 | Trailing ID: 1000000118239982 | Found 0 regular + 2 algo orders
+2025-12-22 14:34:06.427 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] TRXUSDT: Order found: id=1000000117451842, type=stop_market, side=buy, stop=$0.289450
+2025-12-22 14:34:06.428 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] TRXUSDT: Order found: id=1000000118239982, type=trailing_stop_market, side=buy, stop=$0.000000
+2025-12-22 14:34:06.428 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] TRXUSDT: Position is healthy
+2025-12-22 14:34:06.944 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] DOTUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000117452779 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:34:06.944 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] DOTUSDT: Order found: id=1000000117452779, type=stop_market, side=sell, stop=$1.774000
+2025-12-22 14:34:06.945 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] DOTUSDT: Order found: id=1000000117452817, type=take_profit_market, side=sell, stop=$1.867000
+2025-12-22 14:34:06.945 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] DOTUSDT: Position is healthy
+2025-12-22 14:34:07.454 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] APTUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000117454931 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:34:07.455 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] APTUSDT: Order found: id=1000000117454931, type=stop_market, side=sell, stop=$1.583000
+2025-12-22 14:34:07.455 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] APTUSDT: Order found: id=1000000117454971, type=take_profit_market, side=sell, stop=$1.660000
+2025-12-22 14:34:07.455 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] APTUSDT: Position is healthy
+2025-12-22 14:34:07.964 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] ARBUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000117455406 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:34:07.966 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] ARBUSDT: Order found: id=1000000117455406, type=stop_market, side=sell, stop=$0.185800
+2025-12-22 14:34:07.966 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] ARBUSDT: Order found: id=1000000117455442, type=take_profit_market, side=sell, stop=$0.194200
+2025-12-22 14:34:07.967 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] ARBUSDT: Position is healthy
+2025-12-22 14:34:08.479 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] XRPUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000118673420 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:34:08.479 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] XRPUSDT: Order found: id=1000000118673420, type=stop_market, side=sell, stop=$1.905800
+2025-12-22 14:34:08.479 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] XRPUSDT: Order found: id=1000000118673479, type=take_profit_market, side=sell, stop=$1.965600
+2025-12-22 14:34:08.480 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] XRPUSDT: Position is healthy
+2025-12-22 14:34:08.480 | INFO     | core.position_tracker:check_order_health:1084 | [OrderHealth] All 9 positions healthy
+2025-12-22 14:34:08.480 | INFO     | core.trading_loop:_run_health_checks:687 | [HealthCheck] Complete | Orders: 9/9 healthy | Model: warming_up (0.0% accuracy)
+2025-12-22 14:34:08.912 | INFO     | core.trading_loop:run:154 | 
+==================================================
+2025-12-22 14:34:08.913 | INFO     | core.trading_loop:run:155 | Cycle #1 - 14:34:08 UTC
+2025-12-22 14:34:08.914 | INFO     | core.trading_loop:run:156 | ==================================================
+2025-12-22 14:34:11.194 | INFO     | core.trading_loop:_update_positions:300 | Open Positions:
+2025-12-22 14:34:11.195 | INFO     | core.trading_loop:_update_positions:304 |   ETHUSDT: LONG @ $3034.2000 | Current: $3042.3900 | PnL: +0.27%
+2025-12-22 14:34:11.195 | INFO     | core.trading_loop:_update_positions:304 |   BNBUSDT: LONG @ $865.1100 | Current: $865.9600 | PnL: +0.10%
+2025-12-22 14:34:11.195 | INFO     | core.trading_loop:_update_positions:304 |   DOGEUSDT: LONG @ $0.1322 | Current: $0.1330 | PnL: +0.62%
+2025-12-22 14:34:11.195 | INFO     | core.trading_loop:_update_positions:304 |   ADAUSDT: LONG @ $0.3735 | Current: $0.3736 | PnL: +0.03%
+2025-12-22 14:34:11.196 | INFO     | core.trading_loop:_update_positions:304 |   TRXUSDT: SHORT @ $0.2876 | Current: $0.2834 | PnL: +1.47% [TRAILING]
+2025-12-22 14:34:11.196 | INFO     | core.trading_loop:_update_positions:304 |   DOTUSDT: LONG @ $1.8160 | Current: $1.8260 | PnL: +0.55%
+2025-12-22 14:34:11.196 | INFO     | core.trading_loop:_update_positions:304 |   APTUSDT: LONG @ $1.6181 | Current: $1.6299 | PnL: +0.73%
+2025-12-22 14:34:11.196 | INFO     | core.trading_loop:_update_positions:304 |   ARBUSDT: LONG @ $0.1896 | Current: $0.1895 | PnL: -0.05%
+2025-12-22 14:34:11.196 | INFO     | core.trading_loop:_update_positions:304 |   XRPUSDT: LONG @ $1.9330 | Current: $1.9284 | PnL: -0.24%
+2025-12-22 14:34:20.617 | INFO     | sensors.aggregator:collect_all:76 | [Aggregator] Collected 18/18 symbols in 4.85s
+2025-12-22 14:34:22.729 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for DOGEUSDT: LONG @ 0.13, conf=0.79
+2025-12-22 14:34:22.730 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG DOGEUSDT @ 0.79
+2025-12-22 14:34:22.730 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for DOGEUSDT
+2025-12-22 14:34:23.947 | INFO     | agents.trend_follower:analyze:148 | [TrendFollower] Signal generated for TRXUSDT: SHORT @ 0.28, conf=0.90
+2025-12-22 14:34:23.948 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] TrendFollower generated signal: SHORT TRXUSDT @ 0.90
+2025-12-22 14:34:23.948 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for TRXUSDT
+2025-12-22 14:34:24.897 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for DOTUSDT: LONG @ 1.83, conf=0.79
+2025-12-22 14:34:24.898 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG DOTUSDT @ 0.79
+2025-12-22 14:34:24.898 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for DOTUSDT
+2025-12-22 14:34:25.802 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for APTUSDT: LONG @ 1.63, conf=0.80
+2025-12-22 14:34:25.802 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG APTUSDT @ 0.80
+2025-12-22 14:34:25.803 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for APTUSDT
+2025-12-22 14:34:25.809 | INFO     | core.trading_loop:_analyze_and_decide:416 | Collecting market data...
+2025-12-22 14:34:30.090 | INFO     | sensors.aggregator:collect_all:76 | [Aggregator] Collected 18/18 symbols in 4.28s
+2025-12-22 14:34:31.533 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+BTCUSDT: $89683.2000 | Regime: compression | Bias: long
+2025-12-22 14:34:32.074 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing BTCUSDT - Regime: compression, Price: $89683.20
+2025-12-22 14:34:32.075 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for BTCUSDT: LONG @ 89683.20, conf=0.81
+2025-12-22 14:34:32.076 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG BTCUSDT @ 0.81
+2025-12-22 14:34:32.076 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for BTCUSDT
+2025-12-22 14:34:32.076 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for BTCUSDT
+2025-12-22 14:34:32.076 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:32.077 | INFO     | orchestrator.risk_guardian:validate_decision:240 | [RiskGuardian] Modified decision: Size adjusted for compression regime
+2025-12-22 14:34:32.077 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: TRADE (source: RULES, conf: 0.81)
+2025-12-22 14:34:32.078 | INFO     | core.trading_loop:_execute_decision:464 | Decision: TRADE | Source: RULES
+2025-12-22 14:34:32.079 | INFO     | core.trading_loop:_execute_decision:490 |   Signal: LONG BTCUSDT
+2025-12-22 14:34:32.079 | INFO     | core.trading_loop:_execute_decision:491 |   Entry: $89683.2000
+2025-12-22 14:34:32.079 | INFO     | core.trading_loop:_execute_decision:492 |   Size: $15.65
+2025-12-22 14:34:32.080 | INFO     | core.trading_loop:_execute_decision:493 |   Confidence: 81%
+2025-12-22 14:34:32.334 | WARNING  | core.trade_executor:_calculate_quantity:202 | [TradeExecutor] BTCUSDT: Size $15.65 below min notional $20
+2025-12-22 14:34:32.335 | WARNING  | core.trade_executor:_calculate_quantity:222 | [TradeExecutor] BTCUSDT: Min qty $89.64 exceeds size $20.00
+2025-12-22 14:34:32.335 | INFO     | core.trading_loop:_execute_decision:537 |   ✗ Not executed: quantity_too_small
+2025-12-22 14:34:33.228 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+ETHUSDT: $3043.2100 | Regime: compression | Bias: long
+2025-12-22 14:34:33.771 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing ETHUSDT - Regime: compression, Price: $3043.21
+2025-12-22 14:34:33.772 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for ETHUSDT: LONG @ 3043.21, conf=0.79
+2025-12-22 14:34:33.772 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG ETHUSDT @ 0.79
+2025-12-22 14:34:33.772 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for ETHUSDT
+2025-12-22 14:34:33.772 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for ETHUSDT
+2025-12-22 14:34:33.773 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:33.773 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:34:33.773 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:34:33.773 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on ETHUSDT
+2025-12-22 14:34:34.696 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+BNBUSDT: $865.0000 | Regime: compression | Bias: long
+2025-12-22 14:34:35.220 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing BNBUSDT - Regime: compression, Price: $865.00
+2025-12-22 14:34:35.221 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for BNBUSDT: LONG @ 865.00, conf=0.79
+2025-12-22 14:34:35.222 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG BNBUSDT @ 0.79
+2025-12-22 14:34:35.222 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for BNBUSDT
+2025-12-22 14:34:35.222 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for BNBUSDT
+2025-12-22 14:34:35.223 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:35.223 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:34:35.223 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:34:35.223 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on BNBUSDT
+2025-12-22 14:34:35.224 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+DOGEUSDT: $0.1330 | Regime: compression | Bias: long
+2025-12-22 14:34:35.750 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing DOGEUSDT - Regime: compression, Price: $0.13
+2025-12-22 14:34:35.751 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for DOGEUSDT: LONG @ 0.13, conf=0.79
+2025-12-22 14:34:35.752 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG DOGEUSDT @ 0.79
+2025-12-22 14:34:35.752 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for DOGEUSDT
+2025-12-22 14:34:35.753 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for DOGEUSDT
+2025-12-22 14:34:35.753 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:35.753 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:34:35.754 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:34:35.754 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on DOGEUSDT
+2025-12-22 14:34:36.656 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+XRPUSDT: $1.9277 | Regime: compression | Bias: long
+2025-12-22 14:34:37.192 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing XRPUSDT - Regime: compression, Price: $1.93
+2025-12-22 14:34:37.193 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for XRPUSDT: LONG @ 1.93, conf=0.79
+2025-12-22 14:34:37.194 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG XRPUSDT @ 0.79
+2025-12-22 14:34:37.194 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for XRPUSDT
+2025-12-22 14:34:37.194 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for XRPUSDT
+2025-12-22 14:34:37.195 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:37.195 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:34:37.195 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:34:37.195 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on XRPUSDT
+2025-12-22 14:34:38.183 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+ADAUSDT: $0.3740 | Regime: strong_uptrend | Bias: long
+2025-12-22 14:34:38.712 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing ADAUSDT - Regime: strong_uptrend, Price: $0.37
+2025-12-22 14:34:38.713 | INFO     | agents.trend_follower:analyze:148 | [TrendFollower] Signal generated for ADAUSDT: LONG @ 0.37, conf=0.90
+2025-12-22 14:34:38.714 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] TrendFollower generated signal: LONG ADAUSDT @ 0.90
+2025-12-22 14:34:38.714 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for ADAUSDT
+2025-12-22 14:34:38.714 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for ADAUSDT
+2025-12-22 14:34:38.715 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:38.715 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:34:38.715 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:34:38.715 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on ADAUSDT
+2025-12-22 14:34:39.623 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+1000PEPEUSDT: $0.0040 | Regime: compression | Bias: neutral
+2025-12-22 14:34:40.156 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing 1000PEPEUSDT - Regime: compression, Price: $0.00
+2025-12-22 14:34:40.156 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for 1000PEPEUSDT
+2025-12-22 14:34:40.157 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for 1000PEPEUSDT
+2025-12-22 14:34:40.157 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:40.157 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:34:40.157 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:34:40.158 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:34:40.158 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+TRXUSDT: $0.2831 | Regime: strong_downtrend | Bias: short
+2025-12-22 14:34:40.701 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing TRXUSDT - Regime: strong_downtrend, Price: $0.28
+2025-12-22 14:34:40.702 | INFO     | agents.trend_follower:analyze:148 | [TrendFollower] Signal generated for TRXUSDT: SHORT @ 0.28, conf=0.90
+2025-12-22 14:34:40.703 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] TrendFollower generated signal: SHORT TRXUSDT @ 0.90
+2025-12-22 14:34:40.703 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for TRXUSDT
+2025-12-22 14:34:40.703 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for TRXUSDT
+2025-12-22 14:34:40.703 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:40.704 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:34:40.704 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:34:40.704 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already SHORT on TRXUSDT
+2025-12-22 14:34:41.656 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+POLUSDT: $0.1090 | Regime: strong_uptrend | Bias: long
+2025-12-22 14:34:42.194 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing POLUSDT - Regime: strong_uptrend, Price: $0.11
+2025-12-22 14:34:42.195 | INFO     | agents.trend_follower:analyze:148 | [TrendFollower] Signal generated for POLUSDT: LONG @ 0.11, conf=0.85
+2025-12-22 14:34:42.196 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] TrendFollower generated signal: LONG POLUSDT @ 0.85
+2025-12-22 14:34:42.196 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for POLUSDT
+2025-12-22 14:34:42.196 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for POLUSDT
+2025-12-22 14:34:42.196 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:42.197 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: TRADE (source: RULES, conf: 0.85)
+2025-12-22 14:34:42.197 | INFO     | core.trading_loop:_execute_decision:464 | Decision: TRADE | Source: RULES
+2025-12-22 14:34:42.197 | INFO     | core.trading_loop:_execute_decision:490 |   Signal: LONG POLUSDT
+2025-12-22 14:34:42.197 | INFO     | core.trading_loop:_execute_decision:491 |   Entry: $0.1090
+2025-12-22 14:34:42.197 | INFO     | core.trading_loop:_execute_decision:492 |   Size: $26.09
+2025-12-22 14:34:42.197 | INFO     | core.trading_loop:_execute_decision:493 |   Confidence: 85%
+2025-12-22 14:34:42.452 | INFO     | core.trade_executor:_execute_with_protection:268 | [EXECUTE] Opening LONG POLUSDT, qty=239.0000, price~$0.1090
+2025-12-22 14:34:42.709 | INFO     | execution.binance_client:place_market_order:716 | Market order: BUY 239.0 POLUSDT - Status: closed
+2025-12-22 14:34:42.710 | INFO     | core.trade_executor:_execute_with_protection:287 | [EXECUTE] Entry filled @ $0.1091
+2025-12-22 14:34:43.476 | INFO     | execution.binance_client:place_stop_loss:853 | Stop Loss already exists for POLUSDT - cancelling old and creating new
+2025-12-22 14:34:43.997 | INFO     | execution.binance_client:cancel_algo_orders:1317 | Cancelled algo order 1000000120305373 for POLUSDT
+2025-12-22 14:34:44.261 | INFO     | execution.binance_client:place_stop_loss:861 | Stop Loss created after cancel: SELL @ $0.1076 (algoId=1000000120318516)
+2025-12-22 14:34:44.262 | INFO     | core.trade_executor:_execute_with_protection:311 | [EXECUTE] SL set @ $0.1076
+2025-12-22 14:34:44.533 | INFO     | execution.binance_client:place_take_profit:922 | Take Profit created: SELL 119.0 @ $0.111
+2025-12-22 14:34:44.534 | INFO     | core.trade_executor:_execute_with_protection:340 | [EXECUTE] TP1 set @ $0.1110 (119.0000)
+2025-12-22 14:34:44.534 | INFO     | core.trade_executor:_execute_with_protection:347 | [EXECUTE] Trailing stop will activate after TP1 (callback=1%)
+2025-12-22 14:34:44.535 | INFO     | core.position_tracker:add_position:123 | [PositionTracker] Added position: LONG POLUSDT @ $0.1091, qty=239.0000
+2025-12-22 14:34:44.535 | INFO     | core.trading_loop:_execute_decision:514 |   ✓ Executed @ $0.1091
+2025-12-22 14:34:44.539 | INFO     | storage.trade_journal:record_trade_open:144 | [TradeJournal] Recorded OPEN: LONG POLUSDT @ $0.1091
+2025-12-22 14:34:44.734 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+DOTUSDT: $1.8260 | Regime: compression | Bias: long
+2025-12-22 14:34:45.265 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing DOTUSDT - Regime: compression, Price: $1.83
+2025-12-22 14:34:45.266 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for DOTUSDT: LONG @ 1.83, conf=0.79
+2025-12-22 14:34:45.266 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG DOTUSDT @ 0.79
+2025-12-22 14:34:45.267 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for DOTUSDT
+2025-12-22 14:34:45.267 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for DOTUSDT
+2025-12-22 14:34:45.267 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:45.268 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:34:45.268 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:34:45.268 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on DOTUSDT
+2025-12-22 14:34:46.200 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+LINKUSDT: $12.6820 | Regime: compression | Bias: long
+2025-12-22 14:34:47.276 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing LINKUSDT - Regime: compression, Price: $12.68
+2025-12-22 14:34:47.277 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for LINKUSDT: LONG @ 12.68, conf=0.79
+2025-12-22 14:34:47.277 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG LINKUSDT @ 0.79
+2025-12-22 14:34:47.278 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for LINKUSDT
+2025-12-22 14:34:47.278 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for LINKUSDT
+2025-12-22 14:34:47.278 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:47.278 | INFO     | orchestrator.risk_guardian:validate_decision:240 | [RiskGuardian] Modified decision: Size adjusted for compression regime
+2025-12-22 14:34:47.279 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: TRADE (source: RULES, conf: 0.79)
+2025-12-22 14:34:47.279 | INFO     | core.trading_loop:_execute_decision:464 | Decision: TRADE | Source: RULES
+2025-12-22 14:34:47.279 | INFO     | core.trading_loop:_execute_decision:490 |   Signal: LONG LINKUSDT
+2025-12-22 14:34:47.279 | INFO     | core.trading_loop:_execute_decision:491 |   Entry: $12.6820
+2025-12-22 14:34:47.280 | INFO     | core.trading_loop:_execute_decision:492 |   Size: $15.67
+2025-12-22 14:34:47.280 | INFO     | core.trading_loop:_execute_decision:493 |   Confidence: 79%
+2025-12-22 14:34:47.551 | INFO     | core.trade_executor:_execute_with_protection:268 | [EXECUTE] Opening LONG LINKUSDT, qty=1.2000, price~$12.6800
+2025-12-22 14:34:48.299 | ERROR    | execution.binance_client:place_market_order:731 | Invalid order: binanceusdm {"code":-4164,"msg":"Order's notional must be no smaller than 20 (unless you choose reduce only)."}
+2025-12-22 14:34:48.299 | INFO     | core.trade_executor:_execute_with_protection:287 | [EXECUTE] Entry filled @ $12.6800
+2025-12-22 14:34:49.060 | ERROR    | execution.binance_client:place_stop_loss:875 | Failed to place stop loss: binanceusdm {"code":-4509,"msg":"Time in Force (TIF) GTE can only be used with open positions. Please ensure that positions are available."}
+2025-12-22 14:34:49.060 | INFO     | core.trade_executor:_execute_with_protection:311 | [EXECUTE] SL set @ $12.4270
+2025-12-22 14:34:49.325 | INFO     | execution.binance_client:place_take_profit:922 | Take Profit created: SELL 0.6 @ $12.983
+2025-12-22 14:34:49.326 | INFO     | core.trade_executor:_execute_with_protection:340 | [EXECUTE] TP1 set @ $12.9830 (0.6000)
+2025-12-22 14:34:49.326 | INFO     | core.trade_executor:_execute_with_protection:347 | [EXECUTE] Trailing stop will activate after TP1 (callback=1%)
+2025-12-22 14:34:49.326 | ERROR    | core.position_tracker:add_position:86 | [PositionTracker] INVALID position data: LINKUSDT entry_price=0, quantity=0 - NOT adding position
+2025-12-22 14:34:49.327 | ERROR    | core.trade_executor:execute:177 | [TradeExecutor] Execution failed: Invalid position data: entry_price=0, quantity=0
+2025-12-22 14:34:49.327 | INFO     | core.trading_loop:_execute_decision:537 |   ✗ Not executed: Invalid position data: entry_price=0, quantity=0
+2025-12-22 14:34:50.283 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+AVAXUSDT: $12.3160 | Regime: compression | Bias: long
+2025-12-22 14:34:51.303 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing AVAXUSDT - Regime: compression, Price: $12.32
+2025-12-22 14:34:51.304 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for AVAXUSDT: LONG @ 12.32, conf=0.79
+2025-12-22 14:34:51.304 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG AVAXUSDT @ 0.79
+2025-12-22 14:34:51.305 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for AVAXUSDT
+2025-12-22 14:34:51.305 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for AVAXUSDT
+2025-12-22 14:34:51.305 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:51.305 | INFO     | orchestrator.risk_guardian:validate_decision:240 | [RiskGuardian] Modified decision: Size adjusted for compression regime
+2025-12-22 14:34:51.306 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: TRADE (source: RULES, conf: 0.79)
+2025-12-22 14:34:51.306 | INFO     | core.trading_loop:_execute_decision:464 | Decision: TRADE | Source: RULES
+2025-12-22 14:34:51.306 | INFO     | core.trading_loop:_execute_decision:490 |   Signal: LONG AVAXUSDT
+2025-12-22 14:34:51.306 | INFO     | core.trading_loop:_execute_decision:491 |   Entry: $12.3160
+2025-12-22 14:34:51.306 | INFO     | core.trading_loop:_execute_decision:492 |   Size: $15.67
+2025-12-22 14:34:51.307 | INFO     | core.trading_loop:_execute_decision:493 |   Confidence: 79%
+2025-12-22 14:34:51.559 | INFO     | core.trade_executor:_execute_with_protection:268 | [EXECUTE] Opening LONG AVAXUSDT, qty=1.2000, price~$12.3180
+2025-12-22 14:34:51.821 | INFO     | execution.binance_client:place_market_order:716 | Market order: BUY 1.2000000000000002 AVAXUSDT - Status: closed
+2025-12-22 14:34:51.821 | INFO     | core.trade_executor:_execute_with_protection:287 | [EXECUTE] Entry filled @ $12.3260
+2025-12-22 14:34:52.583 | INFO     | execution.binance_client:place_stop_loss:853 | Stop Loss already exists for AVAXUSDT - cancelling old and creating new
+2025-12-22 14:34:53.110 | INFO     | execution.binance_client:cancel_algo_orders:1317 | Cancelled algo order 1000000120305533 for AVAXUSDT
+2025-12-22 14:34:53.373 | INFO     | execution.binance_client:place_stop_loss:861 | Stop Loss created after cancel: SELL @ $12.11 (algoId=1000000120320311)
+2025-12-22 14:34:53.373 | INFO     | core.trade_executor:_execute_with_protection:311 | [EXECUTE] SL set @ $12.1100
+2025-12-22 14:34:53.373 | ERROR    | execution.binance_client:place_take_profit:938 | Failed to place take profit: binanceusdm amount of AVAX/USDT:USDT must be greater than minimum amount precision of 1
+2025-12-22 14:34:53.374 | INFO     | core.trade_executor:_execute_with_protection:340 | [EXECUTE] TP1 set @ $12.5800 (0.6000)
+2025-12-22 14:34:53.374 | INFO     | core.trade_executor:_execute_with_protection:347 | [EXECUTE] Trailing stop will activate after TP1 (callback=1%)
+2025-12-22 14:34:53.374 | ERROR    | core.trade_executor:execute:177 | [TradeExecutor] Execution failed: 'NoneType' object has no attribute 'order_id'
+2025-12-22 14:34:53.375 | INFO     | core.trading_loop:_execute_decision:537 |   ✗ Not executed: 'NoneType' object has no attribute 'order_id'
+2025-12-22 14:34:54.303 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+NEARUSDT: $1.5670 | Regime: strong_uptrend | Bias: long
+2025-12-22 14:34:54.829 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing NEARUSDT - Regime: strong_uptrend, Price: $1.57
+2025-12-22 14:34:54.830 | INFO     | agents.trend_follower:analyze:148 | [TrendFollower] Signal generated for NEARUSDT: LONG @ 1.57, conf=0.90
+2025-12-22 14:34:54.830 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] TrendFollower generated signal: LONG NEARUSDT @ 0.90
+2025-12-22 14:34:54.830 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for NEARUSDT
+2025-12-22 14:34:54.830 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for NEARUSDT
+2025-12-22 14:34:54.831 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:54.831 | INFO     | orchestrator.risk_guardian:validate_decision:240 | [RiskGuardian] Modified decision: Size reduced 30% for high volatility
+2025-12-22 14:34:54.831 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: TRADE (source: RULES, conf: 0.90)
+2025-12-22 14:34:54.831 | INFO     | core.trading_loop:_execute_decision:464 | Decision: TRADE | Source: RULES
+2025-12-22 14:34:54.832 | INFO     | core.trading_loop:_execute_decision:490 |   Signal: LONG NEARUSDT
+2025-12-22 14:34:54.832 | INFO     | core.trading_loop:_execute_decision:491 |   Entry: $1.5670
+2025-12-22 14:34:54.832 | INFO     | core.trading_loop:_execute_decision:492 |   Size: $18.28
+2025-12-22 14:34:54.832 | INFO     | core.trading_loop:_execute_decision:493 |   Confidence: 90%
+2025-12-22 14:34:55.086 | INFO     | core.trade_executor:_execute_with_protection:268 | [EXECUTE] Opening LONG NEARUSDT, qty=11.6000, price~$1.5690
+2025-12-22 14:34:55.343 | INFO     | execution.binance_client:place_market_order:716 | Market order: BUY 11.600000000000001 NEARUSDT - Status: closed
+2025-12-22 14:34:55.343 | INFO     | core.trade_executor:_execute_with_protection:287 | [EXECUTE] Entry filled @ $1.5700
+2025-12-22 14:34:56.595 | INFO     | execution.binance_client:place_stop_loss:853 | Stop Loss already exists for NEARUSDT - cancelling old and creating new
+2025-12-22 14:34:57.111 | INFO     | execution.binance_client:cancel_algo_orders:1317 | Cancelled algo order 1000000120306050 for NEARUSDT
+2025-12-22 14:34:57.372 | INFO     | execution.binance_client:place_stop_loss:861 | Stop Loss created after cancel: SELL @ $1.543 (algoId=1000000120321020)
+2025-12-22 14:34:57.373 | INFO     | core.trade_executor:_execute_with_protection:311 | [EXECUTE] SL set @ $1.5430
+2025-12-22 14:34:57.632 | INFO     | execution.binance_client:place_take_profit:922 | Take Profit created: SELL 5.0 @ $1.603
+2025-12-22 14:34:57.632 | INFO     | core.trade_executor:_execute_with_protection:340 | [EXECUTE] TP1 set @ $1.6030 (5.8000)
+2025-12-22 14:34:57.632 | INFO     | core.trade_executor:_execute_with_protection:347 | [EXECUTE] Trailing stop will activate after TP1 (callback=1%)
+2025-12-22 14:34:57.632 | INFO     | core.position_tracker:add_position:123 | [PositionTracker] Added position: LONG NEARUSDT @ $1.5700, qty=11.0000
+2025-12-22 14:34:57.632 | INFO     | core.trading_loop:_execute_decision:514 |   ✓ Executed @ $1.5700
+2025-12-22 14:34:57.635 | INFO     | storage.trade_journal:record_trade_open:144 | [TradeJournal] Recorded OPEN: LONG NEARUSDT @ $1.5700
+2025-12-22 14:34:58.828 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+SUIUSDT: $1.4716 | Regime: compression | Bias: long
+2025-12-22 14:34:59.357 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing SUIUSDT - Regime: compression, Price: $1.47
+2025-12-22 14:34:59.358 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for SUIUSDT: LONG @ 1.47, conf=0.79
+2025-12-22 14:34:59.359 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG SUIUSDT @ 0.79
+2025-12-22 14:34:59.359 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for SUIUSDT
+2025-12-22 14:34:59.359 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for SUIUSDT
+2025-12-22 14:34:59.359 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:34:59.360 | INFO     | orchestrator.risk_guardian:validate_decision:240 | [RiskGuardian] Modified decision: Size adjusted for compression regime
+2025-12-22 14:34:59.360 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: TRADE (source: RULES, conf: 0.79)
+2025-12-22 14:34:59.361 | INFO     | core.trading_loop:_execute_decision:464 | Decision: TRADE | Source: RULES
+2025-12-22 14:34:59.361 | INFO     | core.trading_loop:_execute_decision:490 |   Signal: LONG SUIUSDT
+2025-12-22 14:34:59.361 | INFO     | core.trading_loop:_execute_decision:491 |   Entry: $1.4716
+2025-12-22 14:34:59.362 | INFO     | core.trading_loop:_execute_decision:492 |   Size: $15.67
+2025-12-22 14:34:59.362 | INFO     | core.trading_loop:_execute_decision:493 |   Confidence: 79%
+2025-12-22 14:34:59.617 | INFO     | core.trade_executor:_execute_with_protection:268 | [EXECUTE] Opening LONG SUIUSDT, qty=10.6000, price~$1.4736
+2025-12-22 14:34:59.878 | INFO     | execution.binance_client:place_market_order:716 | Market order: BUY 10.600000000000001 SUIUSDT - Status: closed
+2025-12-22 14:34:59.879 | INFO     | core.trade_executor:_execute_with_protection:287 | [EXECUTE] Entry filled @ $1.4762
+2025-12-22 14:35:00.651 | INFO     | execution.binance_client:place_stop_loss:834 | Stop Loss created: SELL @ $1.4423 (algoId=1000000120321900)
+2025-12-22 14:35:00.651 | INFO     | core.trade_executor:_execute_with_protection:311 | [EXECUTE] SL set @ $1.4423
+2025-12-22 14:35:00.986 | INFO     | execution.binance_client:place_take_profit:922 | Take Profit created: SELL 5.3 @ $1.5169
+2025-12-22 14:35:00.986 | INFO     | core.trade_executor:_execute_with_protection:340 | [EXECUTE] TP1 set @ $1.5169 (5.3000)
+2025-12-22 14:35:00.986 | INFO     | core.trade_executor:_execute_with_protection:347 | [EXECUTE] Trailing stop will activate after TP1 (callback=1%)
+2025-12-22 14:35:00.986 | INFO     | core.position_tracker:add_position:123 | [PositionTracker] Added position: LONG SUIUSDT @ $1.4762, qty=10.6000
+2025-12-22 14:35:00.986 | INFO     | core.trading_loop:_execute_decision:514 |   ✓ Executed @ $1.4762
+2025-12-22 14:35:00.990 | INFO     | storage.trade_journal:record_trade_open:144 | [TradeJournal] Recorded OPEN: LONG SUIUSDT @ $1.4762
+2025-12-22 14:35:01.257 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+APTUSDT: $1.6260 | Regime: compression | Bias: long
+2025-12-22 14:35:02.108 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing APTUSDT - Regime: compression, Price: $1.63
+2025-12-22 14:35:02.109 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for APTUSDT: LONG @ 1.63, conf=0.80
+2025-12-22 14:35:02.110 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG APTUSDT @ 0.80
+2025-12-22 14:35:02.110 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for APTUSDT
+2025-12-22 14:35:02.110 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for APTUSDT
+2025-12-22 14:35:02.111 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:35:02.111 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:35:02.111 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:35:02.111 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on APTUSDT
+2025-12-22 14:35:03.124 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+ARBUSDT: $0.1895 | Regime: compression | Bias: long
+2025-12-22 14:35:03.651 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing ARBUSDT - Regime: compression, Price: $0.19
+2025-12-22 14:35:03.652 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for ARBUSDT: LONG @ 0.19, conf=0.79
+2025-12-22 14:35:03.652 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG ARBUSDT @ 0.79
+2025-12-22 14:35:03.653 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for ARBUSDT
+2025-12-22 14:35:03.653 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for ARBUSDT
+2025-12-22 14:35:03.653 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:35:03.653 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:35:03.653 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:35:03.653 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on ARBUSDT
+2025-12-22 14:35:04.713 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+OPUSDT: $0.2759 | Regime: compression | Bias: long
+2025-12-22 14:35:05.248 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing OPUSDT - Regime: compression, Price: $0.28
+2025-12-22 14:35:05.249 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for OPUSDT: LONG @ 0.28, conf=0.79
+2025-12-22 14:35:05.250 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG OPUSDT @ 0.79
+2025-12-22 14:35:05.250 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for OPUSDT
+2025-12-22 14:35:05.250 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for OPUSDT
+2025-12-22 14:35:05.251 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:35:05.251 | INFO     | orchestrator.risk_guardian:validate_decision:240 | [RiskGuardian] Modified decision: Size adjusted for compression regime
+2025-12-22 14:35:05.251 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: TRADE (source: RULES, conf: 0.79)
+2025-12-22 14:35:05.252 | INFO     | core.trading_loop:_execute_decision:464 | Decision: TRADE | Source: RULES
+2025-12-22 14:35:05.252 | INFO     | core.trading_loop:_execute_decision:490 |   Signal: LONG OPUSDT
+2025-12-22 14:35:05.252 | INFO     | core.trading_loop:_execute_decision:491 |   Entry: $0.2759
+2025-12-22 14:35:05.252 | INFO     | core.trading_loop:_execute_decision:492 |   Size: $15.68
+2025-12-22 14:35:05.252 | INFO     | core.trading_loop:_execute_decision:493 |   Confidence: 79%
+2025-12-22 14:35:05.584 | INFO     | core.trade_executor:_execute_with_protection:268 | [EXECUTE] Opening LONG OPUSDT, qty=56.6000, price~$0.2766
+2025-12-22 14:35:06.014 | INFO     | execution.binance_client:place_market_order:716 | Market order: BUY 56.6 OPUSDT - Status: closed
+2025-12-22 14:35:06.015 | INFO     | core.trade_executor:_execute_with_protection:287 | [EXECUTE] Entry filled @ $0.2763
+2025-12-22 14:35:06.779 | INFO     | execution.binance_client:place_stop_loss:853 | Stop Loss already exists for OPUSDT - cancelling old and creating new
+2025-12-22 14:35:07.307 | INFO     | execution.binance_client:cancel_algo_orders:1317 | Cancelled algo order 1000000120305798 for OPUSDT
+2025-12-22 14:35:07.582 | INFO     | execution.binance_client:place_stop_loss:861 | Stop Loss created after cancel: SELL @ $0.27 (algoId=1000000120323830)
+2025-12-22 14:35:07.582 | INFO     | core.trade_executor:_execute_with_protection:311 | [EXECUTE] SL set @ $0.2700
+2025-12-22 14:35:07.847 | INFO     | execution.binance_client:place_take_profit:922 | Take Profit created: SELL 28.2 @ $0.2838
+2025-12-22 14:35:07.847 | INFO     | core.trade_executor:_execute_with_protection:340 | [EXECUTE] TP1 set @ $0.2838 (28.2000)
+2025-12-22 14:35:07.848 | INFO     | core.trade_executor:_execute_with_protection:347 | [EXECUTE] Trailing stop will activate after TP1 (callback=1%)
+2025-12-22 14:35:07.848 | INFO     | core.position_tracker:add_position:123 | [PositionTracker] Added position: LONG OPUSDT @ $0.2763, qty=56.6000
+2025-12-22 14:35:07.848 | INFO     | core.trading_loop:_execute_decision:514 |   ✓ Executed @ $0.2763
+2025-12-22 14:35:07.853 | INFO     | storage.trade_journal:record_trade_open:144 | [TradeJournal] Recorded OPEN: LONG OPUSDT @ $0.2763
+2025-12-22 14:35:09.644 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+WIFUSDT: $0.3371 | Regime: ranging | Bias: neutral
+2025-12-22 14:35:10.181 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing WIFUSDT - Regime: ranging, Price: $0.34
+2025-12-22 14:35:10.181 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for WIFUSDT
+2025-12-22 14:35:10.182 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for WIFUSDT
+2025-12-22 14:35:10.182 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:35:10.182 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:35:10.183 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:35:10.183 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:35:10.443 | INFO     | core.trading_loop:_print_status:604 | 
+Status:
+2025-12-22 14:35:10.443 | INFO     | core.trading_loop:_print_status:605 |   Balance: $435.41
+2025-12-22 14:35:10.444 | INFO     | core.trading_loop:_print_status:606 |   Exposure: $213.18 (49.0%)
+2025-12-22 14:35:10.444 | INFO     | core.trading_loop:_print_status:607 |   Unrealized PnL: $+0.38
+2025-12-22 14:35:10.444 | INFO     | core.trading_loop:_print_status:608 |   Open positions: 13
+2025-12-22 14:35:10.444 | INFO     | core.trading_loop:_print_status:609 |   Cycle: 1 | Decisions: 18 | Trades: 4
+2025-12-22 14:35:10.452 | INFO     | core.trading_loop:_print_status:614 |   Today: 0W / 13L | $-4.26
+2025-12-22 14:35:10.453 | INFO     | core.trading_loop:run:188 | Sleeping 238s until next cycle...
+2025-12-22 14:35:21.533 | WARNING  | core.position_tracker:_get_actual_exit_price:339 | [PositionTracker] Could not get actual price for order 1000000120323830, using fallback: $0.269629
+2025-12-22 14:35:21.534 | INFO     | core.position_tracker:check_exits:190 | [PositionTracker] OPUSDT SL triggered | Target: $0.269629 | Actual: $0.269629 | Slippage: 0.000%
+2025-12-22 14:35:22.310 | WARNING  | execution.binance_client:cancel_algo_orders:1319 | Failed to cancel algo order 1000000120305798: binanceusdm {"code":-2011,"msg":"Unknown order sent."}
+2025-12-22 14:35:22.310 | INFO     | execution.binance_client:cancel_all_position_orders:1136 | [OPUSDT] Cancelled total 0 orders (regular + algo)
+2025-12-22 14:35:22.311 | INFO     | core.position_tracker:_close_position:514 | [PositionTracker] OPUSDT removed from active tracking
+2025-12-22 14:35:22.311 | INFO     | core.position_tracker:_close_position:516 | [PositionTracker] Position closed: OPUSDT | Reason: SL | PnL: -2.41%
+2025-12-22 14:35:22.311 | INFO     | core.trading_loop:_wait_with_trailing_checks:344 | [TRAILING] Position closed: OPUSDT | SL | PnL: -2.41%
+2025-12-22 14:35:22.316 | INFO     | storage.trade_journal:record_trade_close:188 | [TradeJournal] Recorded CLOSE: OPUSDT | SL | PnL: -$0.38
+2025-12-22 14:35:22.573 | INFO     | agents.base_agent:record_result:335 | [BreakoutCatcher] Trade result: PnL=-2.41%, Win rate=0%
+2025-12-22 14:35:22.574 | INFO     | agents.agent_manager:record_trade_result:250 | [AgentManager] Recorded result for BreakoutCatcher: PnL=-2.41%
+2025-12-22 14:35:22.574 | INFO     | orchestrator.orchestrator:record_trade_result:336 | [Orchestrator] Recorded trade result: LONG OPUSDT = -2.41%
+2025-12-22 14:35:22.574 | INFO     | learners.experience_buffer:add_from_context_dict:237 | [ExperienceBuffer] Added from context dict: OPUSDT long PnL=-2.41% reward=-0.48
+2025-12-22 14:35:22.577 | INFO     | learners.online_predictor:learn_from_buffer:352 | [OnlinePredictor] Learned from 10 buffered experiences
+2025-12-22 14:35:22.577 | INFO     | core.trading_loop:_learn_from_trade:586 | [TradingLoop] Predictor trained on 10 samples
+2025-12-22 14:35:22.577 | INFO     | core.trading_loop:_learn_from_trade:588 | [TradingLoop] Learners updated from OPUSDT trade
+2025-12-22 14:38:18.943 | INFO     | core.logger:setup_logger:89 | Logger initialized: file=logs/trading.log, level=INFO
+2025-12-22 14:38:18.974 | INFO     | execution.binance_client:__init__:69 | Using Binance MAINNET
+2025-12-22 14:38:19.285 | INFO     | execution.binance_client:connect:100 | Time synchronized: offset=-126ms
+2025-12-22 14:38:21.507 | INFO     | execution.binance_client:connect:129 | Loaded 609 USDT-M Futures markets
+2025-12-22 14:38:21.778 | INFO     | execution.binance_client:connect:143 | Connected to Binance Futures. Balance: $434.95 USDT
+2025-12-22 14:38:22.300 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for BTCUSDT: 3x
+2025-12-22 14:38:22.557 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for ETHUSDT: 3x
+2025-12-22 14:38:22.812 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for BNBUSDT: 3x
+2025-12-22 14:38:23.100 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for DOGEUSDT: 3x
+2025-12-22 14:38:23.392 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for XRPUSDT: 3x
+2025-12-22 14:38:23.648 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for ADAUSDT: 3x
+2025-12-22 14:38:23.909 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for 1000PEPEUSDT: 3x
+2025-12-22 14:38:24.181 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for TRXUSDT: 3x
+2025-12-22 14:38:24.479 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for POLUSDT: 3x
+2025-12-22 14:38:24.746 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for DOTUSDT: 3x
+2025-12-22 14:38:25.010 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for LINKUSDT: 3x
+2025-12-22 14:38:25.272 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for AVAXUSDT: 3x
+2025-12-22 14:38:25.525 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for NEARUSDT: 3x
+2025-12-22 14:38:25.782 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for SUIUSDT: 3x
+2025-12-22 14:38:26.037 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for APTUSDT: 3x
+2025-12-22 14:38:26.295 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for ARBUSDT: 3x
+2025-12-22 14:38:26.551 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for OPUSDT: 3x
+2025-12-22 14:38:26.807 | INFO     | execution.binance_client:set_leverage:654 | Set leverage for WIFUSDT: 3x
+2025-12-22 14:38:26.810 | INFO     | sensors.aggregator:__init__:52 | [Aggregator] Initialized with 18 symbols
+2025-12-22 14:38:26.813 | INFO     | learners.experience_buffer:_load_from_disk:500 | [ExperienceBuffer] Loaded 30 experiences from disk
+2025-12-22 14:38:26.814 | INFO     | learners.experience_buffer:__init__:72 | [ExperienceBuffer] Initialized with capacity=500, loaded=30
+2025-12-22 14:38:26.814 | INFO     | learners.online_predictor:__init__:82 | [OnlinePredictor] Initialized with model_type=ensemble
+2025-12-22 14:38:26.832 | INFO     | learners.online_predictor:learn_from_buffer:352 | [OnlinePredictor] Learned from 30 buffered experiences
+2025-12-22 14:38:26.832 | INFO     | __main__:run_trading:1022 | [Startup] Predictor trained on 30 historical experiences
+2025-12-22 14:38:26.832 | INFO     | learners.meta_learner:__init__:94 | [MetaLearner] Initialized
+2025-12-22 14:38:26.833 | INFO     | core.position_tracker:__init__:55 | [PositionTracker] Initialized with max_positions=15
+2025-12-22 14:38:26.833 | INFO     | core.trade_executor:__init__:86 | [TradeExecutor] Initialized in NORMAL mode
+2025-12-22 14:38:26.833 | INFO     | storage.trade_journal:__init__:47 | [TradeJournal] Initialized at data/journal
+2025-12-22 14:38:26.835 | INFO     | storage.state_persistence:_load:55 | [StatePersistence] Loaded state from data/state.json
+2025-12-22 14:38:26.835 | INFO     | storage.state_persistence:__init__:47 | [StatePersistence] Initialized at data/state.json
+2025-12-22 14:38:26.836 | INFO     | notifications.telegram:__init__:60 | [TELEGRAM] Initialized: chat_id=-1003367305013
+2025-12-22 14:38:26.845 | INFO     | agents.base_agent:__init__:85 | [TrendFollower] Initialized: Trades pullbacks in trending markets
+2025-12-22 14:38:26.847 | INFO     | agents.base_agent:__init__:85 | [MeanReversion] Initialized: Fades extremes in ranging/choppy markets
+2025-12-22 14:38:26.848 | INFO     | agents.base_agent:__init__:85 | [BreakoutCatcher] Initialized: Catches breakouts from compression
+2025-12-22 14:38:26.848 | INFO     | agents.agent_manager:_init_agents:82 | [AgentManager] Agents initialized: ['TrendFollower', 'MeanReversion', 'BreakoutCatcher']
+2025-12-22 14:38:26.848 | INFO     | agents.agent_manager:__init__:60 | [AgentManager] Initialized with 3 agents
+2025-12-22 14:38:26.849 | INFO     | orchestrator.decision_maker:__init__:110 | [RulesDecisionMaker] Initialized with max_exposure=500.0, min_confidence=0.6, size_mode=fixed, size_pct=2%, leverage=3x
+2025-12-22 14:38:26.849 | INFO     | orchestrator.orchestrator:__init__:107 | [Orchestrator] Using rules-based decision maker only
+2025-12-22 14:38:26.849 | INFO     | orchestrator.risk_guardian:__init__:89 | [RiskGuardian] Initialized - max_exposure=$500.0, max_position=20.0%, min_rr=1.0
+2025-12-22 14:38:26.849 | INFO     | orchestrator.orchestrator:__init__:124 | [Orchestrator] Initialized - LLM: False, Max exposure: $500.0
+2025-12-22 14:38:26.860 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: ETHUSDT
+2025-12-22 14:38:26.860 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: BNBUSDT
+2025-12-22 14:38:26.861 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: DOGEUSDT
+2025-12-22 14:38:26.861 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: ADAUSDT
+2025-12-22 14:38:26.861 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: TRXUSDT
+2025-12-22 14:38:26.862 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: DOTUSDT
+2025-12-22 14:38:26.862 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: APTUSDT
+2025-12-22 14:38:26.862 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: ARBUSDT
+2025-12-22 14:38:26.862 | INFO     | core.position_tracker:load_from_dict:830 | [PositionTracker] Restored position: XRPUSDT
+2025-12-22 14:38:26.863 | INFO     | storage.state_persistence:load_positions:109 | [StatePersistence] Restored 9 positions
+2025-12-22 14:38:26.868 | INFO     | core.trading_loop:__init__:90 | [TradingLoop] Initialized with 18 symbols, interval=300s
+2025-12-22 14:38:27.176 | INFO     | core.trading_loop:run:100 | ============================================================
+2025-12-22 14:38:27.176 | INFO     | core.trading_loop:run:101 | Trading Loop Started
+2025-12-22 14:38:27.177 | INFO     | core.trading_loop:run:102 | Mode: NORMAL
+2025-12-22 14:38:27.177 | INFO     | core.trading_loop:run:103 | Symbols: BTCUSDT, ETHUSDT, BNBUSDT, DOGEUSDT, XRPUSDT, ADAUSDT, 1000PEPEUSDT, TRXUSDT, POLUSDT, DOTUSDT, LINKUSDT, AVAXUSDT, NEARUSDT, SUIUSDT, APTUSDT, ARBUSDT, OPUSDT, WIFUSDT
+2025-12-22 14:38:27.177 | INFO     | core.trading_loop:run:104 | Interval: 300s
+2025-12-22 14:38:27.177 | INFO     | core.trading_loop:run:105 | ============================================================
+2025-12-22 14:38:27.177 | INFO     | core.trading_loop:run:108 | Syncing positions with exchange...
+2025-12-22 14:38:27.439 | INFO     | core.position_tracker:sync_with_exchange:744 | [PositionTracker] Sync complete. Synced: 9, Phantom removed: 0, Discrepancies fixed: 0
+2025-12-22 14:38:27.440 | INFO     | core.trading_loop:run:114 | Cleaning up orphan and wrong-direction orders...
+2025-12-22 14:38:27.724 | INFO     | core.position_tracker:cleanup_orphan_orders:1114 | [OrphanCleanup] Real positions: ['TRXUSDT', 'POLUSDT', 'DOTUSDT', 'APTUSDT', 'ETHUSDT', 'SUIUSDT', 'AVAXUSDT', 'BNBUSDT', 'DOGEUSDT', 'OPUSDT', 'XRPUSDT', 'ADAUSDT', 'ARBUSDT', 'NEARUSDT']
+2025-12-22 14:38:29.697 | INFO     | core.position_tracker:cleanup_orphan_orders:1128 | [OrphanCleanup] Found 28 total algo orders
+2025-12-22 14:38:29.697 | WARNING  | core.position_tracker:cleanup_orphan_orders:1149 | [OrphanCleanup] ORPHAN: LINKUSDT TAKE_PROFIT_MARKET SELL @ $12.983000 (no position exists) - cancelling
+2025-12-22 14:38:29.961 | INFO     | execution.binance_client:cancel_algo_order:1276 | Cancelled algo order 1000000120319470 for LINK/USDT:USDT
+2025-12-22 14:38:29.962 | INFO     | core.position_tracker:cleanup_orphan_orders:1164 | [OrphanCleanup] Cancelled orphan order 1000000120319470
+2025-12-22 14:38:29.962 | WARNING  | core.position_tracker:cleanup_orphan_orders:1210 | [OrphanCleanup] Cleaned up 1 orders: 1 orphan, 0 wrong-direction
+2025-12-22 14:38:29.962 | WARNING  | core.trading_loop:run:119 | Cancelled 1 orphan orders, 0 wrong-direction orders
+2025-12-22 14:38:30.230 | INFO     | core.trading_loop:run:137 | Checking for unprotected exchange positions...
+2025-12-22 14:38:38.248 | INFO     | core.position_tracker:discover_unprotected_positions:896 | [PositionTracker] All exchange positions have SL orders
+2025-12-22 14:38:38.248 | INFO     | core.trading_loop:run:143 | Running startup order health check...
+2025-12-22 14:38:38.249 | INFO     | core.trading_loop:_run_health_checks:626 | [HealthCheck] Running periodic health checks...
+2025-12-22 14:38:38.522 | INFO     | core.position_tracker:cleanup_orphan_orders:1114 | [OrphanCleanup] Real positions: ['TRXUSDT', 'POLUSDT', 'DOTUSDT', 'APTUSDT', 'ETHUSDT', 'SUIUSDT', 'AVAXUSDT', 'BNBUSDT', 'DOGEUSDT', 'OPUSDT', 'XRPUSDT', 'ADAUSDT', 'ARBUSDT', 'NEARUSDT']
+2025-12-22 14:38:40.506 | INFO     | core.position_tracker:cleanup_orphan_orders:1128 | [OrphanCleanup] Found 27 total algo orders
+2025-12-22 14:38:40.507 | INFO     | core.position_tracker:cleanup_orphan_orders:1216 | [OrphanCleanup] No orphan or wrong-direction orders found
+2025-12-22 14:38:41.019 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] ETHUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000117320598 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:38:41.019 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] ETHUSDT: Order found: id=1000000117320598, type=stop_market, side=sell, stop=$2983.640000
+2025-12-22 14:38:41.019 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] ETHUSDT: Order found: id=1000000117320647, type=take_profit_market, side=sell, stop=$3094.880000
+2025-12-22 14:38:41.019 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] ETHUSDT: Position is healthy
+2025-12-22 14:38:41.533 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] BNBUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000117321379 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:38:41.533 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] BNBUSDT: Order found: id=1000000117321379, type=stop_market, side=sell, stop=$854.680000
+2025-12-22 14:38:41.534 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] BNBUSDT: Order found: id=1000000117321424, type=take_profit_market, side=sell, stop=$877.630000
+2025-12-22 14:38:41.534 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] BNBUSDT: Position is healthy
+2025-12-22 14:38:42.080 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] DOGEUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000117450351 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:38:42.081 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] DOGEUSDT: Order found: id=1000000117450351, type=stop_market, side=sell, stop=$0.129620
+2025-12-22 14:38:42.081 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] DOGEUSDT: Order found: id=1000000117450392, type=take_profit_market, side=sell, stop=$0.135200
+2025-12-22 14:38:42.082 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] DOGEUSDT: Position is healthy
+2025-12-22 14:38:42.592 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] ADAUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000119166786 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:38:42.593 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] ADAUSDT: Order found: id=1000000119166786, type=stop_market, side=sell, stop=$0.366800
+2025-12-22 14:38:42.593 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] ADAUSDT: Order found: id=1000000119166859, type=take_profit_market, side=sell, stop=$0.381500
+2025-12-22 14:38:42.593 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] ADAUSDT: Position is healthy
+2025-12-22 14:38:43.119 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] TRXUSDT: Checking position | Side: SHORT | TP1 hit: True | SL order ID: 1000000117451842 | Trailing ID: 1000000118239982 | Found 0 regular + 2 algo orders
+2025-12-22 14:38:43.119 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] TRXUSDT: Order found: id=1000000117451842, type=stop_market, side=buy, stop=$0.289450
+2025-12-22 14:38:43.119 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] TRXUSDT: Order found: id=1000000118239982, type=trailing_stop_market, side=buy, stop=$0.000000
+2025-12-22 14:38:43.119 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] TRXUSDT: Position is healthy
+2025-12-22 14:38:43.628 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] DOTUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000117452779 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:38:43.628 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] DOTUSDT: Order found: id=1000000117452779, type=stop_market, side=sell, stop=$1.774000
+2025-12-22 14:38:43.628 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] DOTUSDT: Order found: id=1000000117452817, type=take_profit_market, side=sell, stop=$1.867000
+2025-12-22 14:38:43.628 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] DOTUSDT: Position is healthy
+2025-12-22 14:38:44.139 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] APTUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000117454931 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:38:44.140 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] APTUSDT: Order found: id=1000000117454931, type=stop_market, side=sell, stop=$1.583000
+2025-12-22 14:38:44.140 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] APTUSDT: Order found: id=1000000117454971, type=take_profit_market, side=sell, stop=$1.660000
+2025-12-22 14:38:44.141 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] APTUSDT: Position is healthy
+2025-12-22 14:38:44.658 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] ARBUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000117455406 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:38:44.658 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] ARBUSDT: Order found: id=1000000117455406, type=stop_market, side=sell, stop=$0.185800
+2025-12-22 14:38:44.659 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] ARBUSDT: Order found: id=1000000117455442, type=take_profit_market, side=sell, stop=$0.194200
+2025-12-22 14:38:44.659 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] ARBUSDT: Position is healthy
+2025-12-22 14:38:45.165 | INFO     | core.position_tracker:check_order_health:941 | [OrderHealth] XRPUSDT: Checking position | Side: LONG | TP1 hit: False | SL order ID: 1000000118673420 | Trailing ID: None | Found 0 regular + 2 algo orders
+2025-12-22 14:38:45.165 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] XRPUSDT: Order found: id=1000000118673420, type=stop_market, side=sell, stop=$1.905800
+2025-12-22 14:38:45.166 | INFO     | core.position_tracker:check_order_health:951 | [OrderHealth] XRPUSDT: Order found: id=1000000118673479, type=take_profit_market, side=sell, stop=$1.965600
+2025-12-22 14:38:45.167 | INFO     | core.position_tracker:check_order_health:1068 | [OrderHealth] XRPUSDT: Position is healthy
+2025-12-22 14:38:45.167 | INFO     | core.position_tracker:check_order_health:1084 | [OrderHealth] All 9 positions healthy
+2025-12-22 14:38:45.167 | INFO     | core.trading_loop:_run_health_checks:687 | [HealthCheck] Complete | Orders: 9/9 healthy | Model: warming_up (0.0% accuracy)
+2025-12-22 14:38:45.621 | INFO     | core.trading_loop:run:154 | 
+==================================================
+2025-12-22 14:38:45.621 | INFO     | core.trading_loop:run:155 | Cycle #1 - 14:38:45 UTC
+2025-12-22 14:38:45.622 | INFO     | core.trading_loop:run:156 | ==================================================
+2025-12-22 14:38:47.924 | INFO     | core.trading_loop:_update_positions:300 | Open Positions:
+2025-12-22 14:38:47.925 | INFO     | core.trading_loop:_update_positions:304 |   ETHUSDT: LONG @ $3034.2000 | Current: $3034.6100 | PnL: +0.01%
+2025-12-22 14:38:47.925 | INFO     | core.trading_loop:_update_positions:304 |   BNBUSDT: LONG @ $865.1100 | Current: $864.6200 | PnL: -0.06%
+2025-12-22 14:38:47.926 | INFO     | core.trading_loop:_update_positions:304 |   DOGEUSDT: LONG @ $0.1322 | Current: $0.1329 | PnL: +0.59%
+2025-12-22 14:38:47.926 | INFO     | core.trading_loop:_update_positions:304 |   ADAUSDT: LONG @ $0.3735 | Current: $0.3731 | PnL: -0.11%
+2025-12-22 14:38:47.926 | INFO     | core.trading_loop:_update_positions:304 |   TRXUSDT: SHORT @ $0.2876 | Current: $0.2833 | PnL: +1.49% [TRAILING]
+2025-12-22 14:38:47.927 | INFO     | core.trading_loop:_update_positions:304 |   DOTUSDT: LONG @ $1.8160 | Current: $1.8250 | PnL: +0.50%
+2025-12-22 14:38:47.927 | INFO     | core.trading_loop:_update_positions:304 |   APTUSDT: LONG @ $1.6181 | Current: $1.6240 | PnL: +0.36%
+2025-12-22 14:38:47.927 | INFO     | core.trading_loop:_update_positions:304 |   ARBUSDT: LONG @ $0.1896 | Current: $0.1895 | PnL: -0.05%
+2025-12-22 14:38:47.927 | INFO     | core.trading_loop:_update_positions:304 |   XRPUSDT: LONG @ $1.9330 | Current: $1.9286 | PnL: -0.23%
+2025-12-22 14:38:58.445 | INFO     | sensors.aggregator:collect_all:76 | [Aggregator] Collected 18/18 symbols in 4.91s
+2025-12-22 14:38:59.820 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for DOGEUSDT: LONG @ 0.13, conf=0.79
+2025-12-22 14:38:59.821 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG DOGEUSDT @ 0.79
+2025-12-22 14:38:59.821 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for DOGEUSDT
+2025-12-22 14:39:00.703 | INFO     | agents.trend_follower:analyze:148 | [TrendFollower] Signal generated for TRXUSDT: SHORT @ 0.28, conf=0.90
+2025-12-22 14:39:00.704 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] TrendFollower generated signal: SHORT TRXUSDT @ 0.90
+2025-12-22 14:39:00.704 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for TRXUSDT
+2025-12-22 14:39:00.710 | INFO     | core.trading_loop:_analyze_and_decide:416 | Collecting market data...
+2025-12-22 14:39:05.801 | INFO     | sensors.aggregator:collect_all:76 | [Aggregator] Collected 18/18 symbols in 5.09s
+2025-12-22 14:39:06.741 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+BTCUSDT: $89520.9000 | Regime: compression | Bias: long
+2025-12-22 14:39:07.267 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing BTCUSDT - Regime: compression, Price: $89520.90
+2025-12-22 14:39:07.268 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for BTCUSDT: LONG @ 89520.90, conf=0.80
+2025-12-22 14:39:07.268 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG BTCUSDT @ 0.80
+2025-12-22 14:39:07.269 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for BTCUSDT
+2025-12-22 14:39:07.269 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for BTCUSDT
+2025-12-22 14:39:07.270 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:07.270 | INFO     | orchestrator.risk_guardian:validate_decision:240 | [RiskGuardian] Modified decision: Size adjusted for compression regime
+2025-12-22 14:39:07.270 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: TRADE (source: RULES, conf: 0.80)
+2025-12-22 14:39:07.270 | INFO     | core.trading_loop:_execute_decision:464 | Decision: TRADE | Source: RULES
+2025-12-22 14:39:07.270 | INFO     | core.trading_loop:_execute_decision:490 |   Signal: LONG BTCUSDT
+2025-12-22 14:39:07.271 | INFO     | core.trading_loop:_execute_decision:491 |   Entry: $89520.9000
+2025-12-22 14:39:07.271 | INFO     | core.trading_loop:_execute_decision:492 |   Size: $15.64
+2025-12-22 14:39:07.271 | INFO     | core.trading_loop:_execute_decision:493 |   Confidence: 80%
+2025-12-22 14:39:07.531 | WARNING  | core.trade_executor:_calculate_quantity:202 | [TradeExecutor] BTCUSDT: Size $15.64 below min notional $20
+2025-12-22 14:39:07.532 | WARNING  | core.trade_executor:_calculate_quantity:222 | [TradeExecutor] BTCUSDT: Min qty $89.50 exceeds size $20.00
+2025-12-22 14:39:07.532 | INFO     | core.trading_loop:_execute_decision:537 |   ✗ Not executed: quantity_too_small
+2025-12-22 14:39:08.514 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+ETHUSDT: $3033.7500 | Regime: compression | Bias: long
+2025-12-22 14:39:09.059 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing ETHUSDT - Regime: compression, Price: $3033.75
+2025-12-22 14:39:09.061 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for ETHUSDT: LONG @ 3033.75, conf=0.79
+2025-12-22 14:39:09.062 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG ETHUSDT @ 0.79
+2025-12-22 14:39:09.062 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for ETHUSDT
+2025-12-22 14:39:09.063 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for ETHUSDT
+2025-12-22 14:39:09.063 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:09.063 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:39:09.064 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:39:09.065 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on ETHUSDT
+2025-12-22 14:39:10.017 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+BNBUSDT: $864.5700 | Regime: compression | Bias: long
+2025-12-22 14:39:10.546 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing BNBUSDT - Regime: compression, Price: $864.57
+2025-12-22 14:39:10.548 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for BNBUSDT: LONG @ 864.57, conf=0.79
+2025-12-22 14:39:10.548 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG BNBUSDT @ 0.79
+2025-12-22 14:39:10.549 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for BNBUSDT
+2025-12-22 14:39:10.549 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for BNBUSDT
+2025-12-22 14:39:10.549 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:10.550 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:39:10.550 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:39:10.550 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on BNBUSDT
+2025-12-22 14:39:10.551 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+DOGEUSDT: $0.1329 | Regime: compression | Bias: long
+2025-12-22 14:39:11.093 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing DOGEUSDT - Regime: compression, Price: $0.13
+2025-12-22 14:39:11.095 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for DOGEUSDT: LONG @ 0.13, conf=0.79
+2025-12-22 14:39:11.095 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG DOGEUSDT @ 0.79
+2025-12-22 14:39:11.096 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for DOGEUSDT
+2025-12-22 14:39:11.096 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for DOGEUSDT
+2025-12-22 14:39:11.096 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:11.097 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:39:11.097 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:39:11.097 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on DOGEUSDT
+2025-12-22 14:39:12.109 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+XRPUSDT: $1.9274 | Regime: compression | Bias: long
+2025-12-22 14:39:13.621 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing XRPUSDT - Regime: compression, Price: $1.93
+2025-12-22 14:39:13.622 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for XRPUSDT: LONG @ 1.93, conf=0.79
+2025-12-22 14:39:13.623 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG XRPUSDT @ 0.79
+2025-12-22 14:39:13.623 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for XRPUSDT
+2025-12-22 14:39:13.623 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for XRPUSDT
+2025-12-22 14:39:13.623 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:13.624 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:39:13.624 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:39:13.624 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on XRPUSDT
+2025-12-22 14:39:14.724 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+ADAUSDT: $0.3729 | Regime: strong_uptrend | Bias: long
+2025-12-22 14:39:15.257 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing ADAUSDT - Regime: strong_uptrend, Price: $0.37
+2025-12-22 14:39:15.257 | INFO     | agents.trend_follower:analyze:148 | [TrendFollower] Signal generated for ADAUSDT: LONG @ 0.37, conf=0.96
+2025-12-22 14:39:15.258 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] TrendFollower generated signal: LONG ADAUSDT @ 0.96
+2025-12-22 14:39:15.258 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for ADAUSDT
+2025-12-22 14:39:15.258 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for ADAUSDT
+2025-12-22 14:39:15.259 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:15.259 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:39:15.259 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:39:15.259 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on ADAUSDT
+2025-12-22 14:39:16.226 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+1000PEPEUSDT: $0.0040 | Regime: compression | Bias: neutral
+2025-12-22 14:39:16.763 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing 1000PEPEUSDT - Regime: compression, Price: $0.00
+2025-12-22 14:39:16.765 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for 1000PEPEUSDT
+2025-12-22 14:39:16.765 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for 1000PEPEUSDT
+2025-12-22 14:39:16.766 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:16.766 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:39:16.766 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:39:16.767 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:39:16.768 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+TRXUSDT: $0.2833 | Regime: strong_downtrend | Bias: short
+2025-12-22 14:39:17.288 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing TRXUSDT - Regime: strong_downtrend, Price: $0.28
+2025-12-22 14:39:17.289 | INFO     | agents.trend_follower:analyze:148 | [TrendFollower] Signal generated for TRXUSDT: SHORT @ 0.28, conf=0.90
+2025-12-22 14:39:17.290 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] TrendFollower generated signal: SHORT TRXUSDT @ 0.90
+2025-12-22 14:39:17.290 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for TRXUSDT
+2025-12-22 14:39:17.290 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for TRXUSDT
+2025-12-22 14:39:17.290 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:17.291 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:39:17.291 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:39:17.291 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already SHORT on TRXUSDT
+2025-12-22 14:39:18.380 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+POLUSDT: $0.1089 | Regime: compression | Bias: long
+2025-12-22 14:39:18.908 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing POLUSDT - Regime: compression, Price: $0.11
+2025-12-22 14:39:18.909 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for POLUSDT: LONG @ 0.11, conf=0.79
+2025-12-22 14:39:18.910 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG POLUSDT @ 0.79
+2025-12-22 14:39:18.910 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for POLUSDT
+2025-12-22 14:39:18.911 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for POLUSDT
+2025-12-22 14:39:18.911 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:18.911 | INFO     | orchestrator.risk_guardian:validate_decision:240 | [RiskGuardian] Modified decision: Size adjusted for compression regime
+2025-12-22 14:39:18.912 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: TRADE (source: RULES, conf: 0.79)
+2025-12-22 14:39:18.912 | INFO     | core.trading_loop:_execute_decision:464 | Decision: TRADE | Source: RULES
+2025-12-22 14:39:18.912 | INFO     | core.trading_loop:_execute_decision:490 |   Signal: LONG POLUSDT
+2025-12-22 14:39:18.912 | INFO     | core.trading_loop:_execute_decision:491 |   Entry: $0.1089
+2025-12-22 14:39:18.913 | INFO     | core.trading_loop:_execute_decision:492 |   Size: $15.63
+2025-12-22 14:39:18.913 | INFO     | core.trading_loop:_execute_decision:493 |   Confidence: 79%
+2025-12-22 14:39:19.170 | INFO     | core.trade_executor:_execute_with_protection:268 | [EXECUTE] Opening LONG POLUSDT, qty=143.0000, price~$0.1088
+2025-12-22 14:39:19.425 | INFO     | execution.binance_client:place_market_order:716 | Market order: BUY 143.0 POLUSDT - Status: closed
+2025-12-22 14:39:19.426 | INFO     | core.trade_executor:_execute_with_protection:287 | [EXECUTE] Entry filled @ $0.1089
+2025-12-22 14:39:20.188 | INFO     | execution.binance_client:place_stop_loss:853 | Stop Loss already exists for POLUSDT - cancelling old and creating new
+2025-12-22 14:39:20.715 | INFO     | execution.binance_client:cancel_algo_orders:1317 | Cancelled algo order 1000000120318516 for POLUSDT
+2025-12-22 14:39:20.979 | INFO     | execution.binance_client:cancel_algo_orders:1317 | Cancelled algo order 1000000120318595 for POLUSDT
+2025-12-22 14:39:21.242 | INFO     | execution.binance_client:place_stop_loss:861 | Stop Loss created after cancel: SELL @ $0.1068 (algoId=1000000120379270)
+2025-12-22 14:39:21.243 | INFO     | core.trade_executor:_execute_with_protection:311 | [EXECUTE] SL set @ $0.1068
+2025-12-22 14:39:21.503 | INFO     | execution.binance_client:place_take_profit:922 | Take Profit created: SELL 71.0 @ $0.1113
+2025-12-22 14:39:21.504 | INFO     | core.trade_executor:_execute_with_protection:340 | [EXECUTE] TP1 set @ $0.1113 (71.0000)
+2025-12-22 14:39:21.504 | INFO     | core.trade_executor:_execute_with_protection:347 | [EXECUTE] Trailing stop will activate after TP1 (callback=1%)
+2025-12-22 14:39:21.505 | INFO     | core.position_tracker:add_position:123 | [PositionTracker] Added position: LONG POLUSDT @ $0.1089, qty=143.0000
+2025-12-22 14:39:21.505 | INFO     | core.trading_loop:_execute_decision:514 |   ✓ Executed @ $0.1089
+2025-12-22 14:39:21.510 | INFO     | storage.trade_journal:record_trade_open:144 | [TradeJournal] Recorded OPEN: LONG POLUSDT @ $0.1089
+2025-12-22 14:39:22.659 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+DOTUSDT: $1.8270 | Regime: compression | Bias: long
+2025-12-22 14:39:23.182 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing DOTUSDT - Regime: compression, Price: $1.83
+2025-12-22 14:39:23.183 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for DOTUSDT: LONG @ 1.83, conf=0.79
+2025-12-22 14:39:23.183 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG DOTUSDT @ 0.79
+2025-12-22 14:39:23.183 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for DOTUSDT
+2025-12-22 14:39:23.183 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for DOTUSDT
+2025-12-22 14:39:23.184 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:23.184 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:39:23.184 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:39:23.184 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on DOTUSDT
+2025-12-22 14:39:24.105 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+LINKUSDT: $12.6490 | Regime: compression | Bias: long
+2025-12-22 14:39:24.665 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing LINKUSDT - Regime: compression, Price: $12.65
+2025-12-22 14:39:24.666 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for LINKUSDT: LONG @ 12.65, conf=0.79
+2025-12-22 14:39:24.666 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG LINKUSDT @ 0.79
+2025-12-22 14:39:24.666 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for LINKUSDT
+2025-12-22 14:39:24.666 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for LINKUSDT
+2025-12-22 14:39:24.667 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:24.667 | INFO     | orchestrator.risk_guardian:validate_decision:240 | [RiskGuardian] Modified decision: Size adjusted for compression regime
+2025-12-22 14:39:24.667 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: TRADE (source: RULES, conf: 0.79)
+2025-12-22 14:39:24.667 | INFO     | core.trading_loop:_execute_decision:464 | Decision: TRADE | Source: RULES
+2025-12-22 14:39:24.667 | INFO     | core.trading_loop:_execute_decision:490 |   Signal: LONG LINKUSDT
+2025-12-22 14:39:24.668 | INFO     | core.trading_loop:_execute_decision:491 |   Entry: $12.6490
+2025-12-22 14:39:24.668 | INFO     | core.trading_loop:_execute_decision:492 |   Size: $15.64
+2025-12-22 14:39:24.668 | INFO     | core.trading_loop:_execute_decision:493 |   Confidence: 79%
+2025-12-22 14:39:24.933 | INFO     | core.trade_executor:_execute_with_protection:268 | [EXECUTE] Opening LONG LINKUSDT, qty=1.2000, price~$12.6370
+2025-12-22 14:39:25.197 | ERROR    | execution.binance_client:place_market_order:731 | Invalid order: binanceusdm {"code":-4164,"msg":"Order's notional must be no smaller than 20 (unless you choose reduce only)."}
+2025-12-22 14:39:25.198 | INFO     | core.trade_executor:_execute_with_protection:287 | [EXECUTE] Entry filled @ $12.6370
+2025-12-22 14:39:25.960 | ERROR    | execution.binance_client:place_stop_loss:875 | Failed to place stop loss: binanceusdm {"code":-4509,"msg":"Time in Force (TIF) GTE can only be used with open positions. Please ensure that positions are available."}
+2025-12-22 14:39:25.960 | INFO     | core.trade_executor:_execute_with_protection:311 | [EXECUTE] SL set @ $12.3800
+2025-12-22 14:39:26.223 | INFO     | execution.binance_client:place_take_profit:922 | Take Profit created: SELL 0.6 @ $12.945
+2025-12-22 14:39:26.224 | INFO     | core.trade_executor:_execute_with_protection:340 | [EXECUTE] TP1 set @ $12.9450 (0.6000)
+2025-12-22 14:39:26.224 | INFO     | core.trade_executor:_execute_with_protection:347 | [EXECUTE] Trailing stop will activate after TP1 (callback=1%)
+2025-12-22 14:39:26.224 | ERROR    | core.position_tracker:add_position:86 | [PositionTracker] INVALID position data: LINKUSDT entry_price=0, quantity=0 - NOT adding position
+2025-12-22 14:39:26.224 | ERROR    | core.trade_executor:execute:177 | [TradeExecutor] Execution failed: Invalid position data: entry_price=0, quantity=0
+2025-12-22 14:39:26.224 | INFO     | core.trading_loop:_execute_decision:537 |   ✗ Not executed: Invalid position data: entry_price=0, quantity=0
+2025-12-22 14:39:27.166 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+AVAXUSDT: $12.3270 | Regime: compression | Bias: long
+2025-12-22 14:39:27.694 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing AVAXUSDT - Regime: compression, Price: $12.33
+2025-12-22 14:39:27.695 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for AVAXUSDT: LONG @ 12.33, conf=0.79
+2025-12-22 14:39:27.695 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG AVAXUSDT @ 0.79
+2025-12-22 14:39:27.695 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for AVAXUSDT
+2025-12-22 14:39:27.695 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for AVAXUSDT
+2025-12-22 14:39:27.696 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:27.696 | INFO     | orchestrator.risk_guardian:validate_decision:240 | [RiskGuardian] Modified decision: Size adjusted for compression regime
+2025-12-22 14:39:27.696 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: TRADE (source: RULES, conf: 0.79)
+2025-12-22 14:39:27.696 | INFO     | core.trading_loop:_execute_decision:464 | Decision: TRADE | Source: RULES
+2025-12-22 14:39:27.696 | INFO     | core.trading_loop:_execute_decision:490 |   Signal: LONG AVAXUSDT
+2025-12-22 14:39:27.697 | INFO     | core.trading_loop:_execute_decision:491 |   Entry: $12.3270
+2025-12-22 14:39:27.697 | INFO     | core.trading_loop:_execute_decision:492 |   Size: $15.64
+2025-12-22 14:39:27.697 | INFO     | core.trading_loop:_execute_decision:493 |   Confidence: 79%
+2025-12-22 14:39:27.961 | INFO     | core.trade_executor:_execute_with_protection:268 | [EXECUTE] Opening LONG AVAXUSDT, qty=1.2000, price~$12.3270
+2025-12-22 14:39:28.219 | INFO     | execution.binance_client:place_market_order:716 | Market order: BUY 1.2000000000000002 AVAXUSDT - Status: closed
+2025-12-22 14:39:28.219 | INFO     | core.trade_executor:_execute_with_protection:287 | [EXECUTE] Entry filled @ $12.3300
+2025-12-22 14:39:28.990 | INFO     | execution.binance_client:place_stop_loss:853 | Stop Loss already exists for AVAXUSDT - cancelling old and creating new
+2025-12-22 14:39:29.507 | INFO     | execution.binance_client:cancel_algo_orders:1317 | Cancelled algo order 1000000120320311 for AVAXUSDT
+2025-12-22 14:39:29.764 | INFO     | execution.binance_client:place_stop_loss:861 | Stop Loss created after cancel: SELL @ $12.12 (algoId=1000000120380769)
+2025-12-22 14:39:29.765 | INFO     | core.trade_executor:_execute_with_protection:311 | [EXECUTE] SL set @ $12.1200
+2025-12-22 14:39:29.765 | ERROR    | execution.binance_client:place_take_profit:938 | Failed to place take profit: binanceusdm amount of AVAX/USDT:USDT must be greater than minimum amount precision of 1
+2025-12-22 14:39:29.766 | INFO     | core.trade_executor:_execute_with_protection:340 | [EXECUTE] TP1 set @ $12.5800 (0.6000)
+2025-12-22 14:39:29.766 | INFO     | core.trade_executor:_execute_with_protection:347 | [EXECUTE] Trailing stop will activate after TP1 (callback=1%)
+2025-12-22 14:39:29.766 | ERROR    | core.trade_executor:execute:177 | [TradeExecutor] Execution failed: 'NoneType' object has no attribute 'order_id'
+2025-12-22 14:39:29.767 | INFO     | core.trading_loop:_execute_decision:537 |   ✗ Not executed: 'NoneType' object has no attribute 'order_id'
+2025-12-22 14:39:30.724 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+NEARUSDT: $1.5630 | Regime: strong_uptrend | Bias: long
+2025-12-22 14:39:31.248 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing NEARUSDT - Regime: strong_uptrend, Price: $1.56
+2025-12-22 14:39:31.249 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for NEARUSDT
+2025-12-22 14:39:31.250 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for NEARUSDT
+2025-12-22 14:39:31.250 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:31.250 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:39:31.250 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:39:31.250 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:39:32.182 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+SUIUSDT: $1.4686 | Regime: compression | Bias: long
+2025-12-22 14:39:32.711 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing SUIUSDT - Regime: compression, Price: $1.47
+2025-12-22 14:39:32.712 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for SUIUSDT: LONG @ 1.47, conf=0.79
+2025-12-22 14:39:32.713 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG SUIUSDT @ 0.79
+2025-12-22 14:39:32.713 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for SUIUSDT
+2025-12-22 14:39:32.713 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for SUIUSDT
+2025-12-22 14:39:32.714 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:32.714 | INFO     | orchestrator.risk_guardian:validate_decision:240 | [RiskGuardian] Modified decision: Size adjusted for compression regime
+2025-12-22 14:39:32.714 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: TRADE (source: RULES, conf: 0.79)
+2025-12-22 14:39:32.715 | INFO     | core.trading_loop:_execute_decision:464 | Decision: TRADE | Source: RULES
+2025-12-22 14:39:32.715 | INFO     | core.trading_loop:_execute_decision:490 |   Signal: LONG SUIUSDT
+2025-12-22 14:39:32.716 | INFO     | core.trading_loop:_execute_decision:491 |   Entry: $1.4686
+2025-12-22 14:39:32.716 | INFO     | core.trading_loop:_execute_decision:492 |   Size: $15.64
+2025-12-22 14:39:32.717 | INFO     | core.trading_loop:_execute_decision:493 |   Confidence: 79%
+2025-12-22 14:39:32.971 | INFO     | core.trade_executor:_execute_with_protection:268 | [EXECUTE] Opening LONG SUIUSDT, qty=10.6000, price~$1.4679
+2025-12-22 14:39:33.225 | INFO     | execution.binance_client:place_market_order:716 | Market order: BUY 10.600000000000001 SUIUSDT - Status: closed
+2025-12-22 14:39:33.226 | INFO     | core.trade_executor:_execute_with_protection:287 | [EXECUTE] Entry filled @ $1.4703
+2025-12-22 14:39:33.989 | INFO     | execution.binance_client:place_stop_loss:853 | Stop Loss already exists for SUIUSDT - cancelling old and creating new
+2025-12-22 14:39:34.516 | INFO     | execution.binance_client:cancel_algo_orders:1317 | Cancelled algo order 1000000120321900 for SUIUSDT
+2025-12-22 14:39:34.781 | INFO     | execution.binance_client:cancel_algo_orders:1317 | Cancelled algo order 1000000120321983 for SUIUSDT
+2025-12-22 14:39:35.044 | INFO     | execution.binance_client:place_stop_loss:861 | Stop Loss created after cancel: SELL @ $1.4363 (algoId=1000000120382160)
+2025-12-22 14:39:35.045 | INFO     | core.trade_executor:_execute_with_protection:311 | [EXECUTE] SL set @ $1.4363
+2025-12-22 14:39:35.307 | INFO     | execution.binance_client:place_take_profit:922 | Take Profit created: SELL 5.3 @ $1.511
+2025-12-22 14:39:35.308 | INFO     | core.trade_executor:_execute_with_protection:340 | [EXECUTE] TP1 set @ $1.5110 (5.3000)
+2025-12-22 14:39:35.308 | INFO     | core.trade_executor:_execute_with_protection:347 | [EXECUTE] Trailing stop will activate after TP1 (callback=1%)
+2025-12-22 14:39:35.308 | INFO     | core.position_tracker:add_position:123 | [PositionTracker] Added position: LONG SUIUSDT @ $1.4703, qty=10.6000
+2025-12-22 14:39:35.309 | INFO     | core.trading_loop:_execute_decision:514 |   ✓ Executed @ $1.4703
+2025-12-22 14:39:35.313 | INFO     | storage.trade_journal:record_trade_open:144 | [TradeJournal] Recorded OPEN: LONG SUIUSDT @ $1.4703
+2025-12-22 14:39:36.519 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+APTUSDT: $1.6245 | Regime: compression | Bias: long
+2025-12-22 14:39:37.046 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing APTUSDT - Regime: compression, Price: $1.62
+2025-12-22 14:39:37.047 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for APTUSDT: LONG @ 1.62, conf=0.80
+2025-12-22 14:39:37.047 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG APTUSDT @ 0.80
+2025-12-22 14:39:37.048 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for APTUSDT
+2025-12-22 14:39:37.048 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for APTUSDT
+2025-12-22 14:39:37.048 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:37.048 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:39:37.049 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:39:37.049 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on APTUSDT
+2025-12-22 14:39:37.957 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+ARBUSDT: $0.1896 | Regime: compression | Bias: long
+2025-12-22 14:39:38.491 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing ARBUSDT - Regime: compression, Price: $0.19
+2025-12-22 14:39:38.492 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for ARBUSDT: LONG @ 0.19, conf=0.79
+2025-12-22 14:39:38.493 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG ARBUSDT @ 0.79
+2025-12-22 14:39:38.493 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for ARBUSDT
+2025-12-22 14:39:38.493 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for ARBUSDT
+2025-12-22 14:39:38.493 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:38.494 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 0.85)
+2025-12-22 14:39:38.494 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:39:38.494 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: Signal conflicts with existing position: Already LONG on ARBUSDT
+2025-12-22 14:39:39.389 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+OPUSDT: $0.2759 | Regime: compression | Bias: long
+2025-12-22 14:39:39.912 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing OPUSDT - Regime: compression, Price: $0.28
+2025-12-22 14:39:39.913 | INFO     | agents.breakout_catcher:analyze:149 | [BreakoutCatcher] Signal generated for OPUSDT: LONG @ 0.28, conf=0.79
+2025-12-22 14:39:39.913 | INFO     | agents.agent_manager:collect_signals:146 | [AgentManager] BreakoutCatcher generated signal: LONG OPUSDT @ 0.79
+2025-12-22 14:39:39.913 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 1 signals for OPUSDT
+2025-12-22 14:39:39.913 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 1 signals for OPUSDT
+2025-12-22 14:39:39.914 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:39.914 | INFO     | orchestrator.risk_guardian:validate_decision:240 | [RiskGuardian] Modified decision: Size adjusted for compression regime
+2025-12-22 14:39:39.914 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: TRADE (source: RULES, conf: 0.79)
+2025-12-22 14:39:39.914 | INFO     | core.trading_loop:_execute_decision:464 | Decision: TRADE | Source: RULES
+2025-12-22 14:39:39.914 | INFO     | core.trading_loop:_execute_decision:490 |   Signal: LONG OPUSDT
+2025-12-22 14:39:39.915 | INFO     | core.trading_loop:_execute_decision:491 |   Entry: $0.2759
+2025-12-22 14:39:39.915 | INFO     | core.trading_loop:_execute_decision:492 |   Size: $15.65
+2025-12-22 14:39:39.915 | INFO     | core.trading_loop:_execute_decision:493 |   Confidence: 79%
+2025-12-22 14:39:40.169 | INFO     | core.trade_executor:_execute_with_protection:268 | [EXECUTE] Opening LONG OPUSDT, qty=56.6000, price~$0.2761
+2025-12-22 14:39:40.424 | INFO     | execution.binance_client:place_market_order:716 | Market order: BUY 56.6 OPUSDT - Status: closed
+2025-12-22 14:39:40.424 | INFO     | core.trade_executor:_execute_with_protection:287 | [EXECUTE] Entry filled @ $0.2762
+2025-12-22 14:39:41.190 | INFO     | execution.binance_client:place_stop_loss:853 | Stop Loss already exists for OPUSDT - cancelling old and creating new
+2025-12-22 14:39:41.720 | INFO     | execution.binance_client:cancel_algo_orders:1317 | Cancelled algo order 1000000120323830 for OPUSDT
+2025-12-22 14:39:41.982 | INFO     | execution.binance_client:cancel_algo_orders:1317 | Cancelled algo order 1000000120323881 for OPUSDT
+2025-12-22 14:39:42.246 | INFO     | execution.binance_client:place_stop_loss:861 | Stop Loss created after cancel: SELL @ $0.2699 (algoId=1000000120383479)
+2025-12-22 14:39:42.246 | INFO     | core.trade_executor:_execute_with_protection:311 | [EXECUTE] SL set @ $0.2699
+2025-12-22 14:39:42.499 | INFO     | execution.binance_client:place_take_profit:922 | Take Profit created: SELL 28.2 @ $0.2838
+2025-12-22 14:39:42.500 | INFO     | core.trade_executor:_execute_with_protection:340 | [EXECUTE] TP1 set @ $0.2838 (28.2000)
+2025-12-22 14:39:42.500 | INFO     | core.trade_executor:_execute_with_protection:347 | [EXECUTE] Trailing stop will activate after TP1 (callback=1%)
+2025-12-22 14:39:42.500 | INFO     | core.position_tracker:add_position:123 | [PositionTracker] Added position: LONG OPUSDT @ $0.2762, qty=56.6000
+2025-12-22 14:39:42.500 | INFO     | core.trading_loop:_execute_decision:514 |   ✓ Executed @ $0.2762
+2025-12-22 14:39:42.503 | INFO     | storage.trade_journal:record_trade_open:144 | [TradeJournal] Recorded OPEN: LONG OPUSDT @ $0.2762
+2025-12-22 14:39:43.607 | INFO     | core.trading_loop:_analyze_and_decide:433 | 
+WIFUSDT: $0.3363 | Regime: ranging | Bias: neutral
+2025-12-22 14:39:44.136 | INFO     | orchestrator.orchestrator:process_context:148 | [Orchestrator] Processing WIFUSDT - Regime: ranging, Price: $0.34
+2025-12-22 14:39:44.137 | INFO     | agents.agent_manager:collect_signals:154 | [AgentManager] Collected 0 signals for WIFUSDT
+2025-12-22 14:39:44.137 | INFO     | orchestrator.orchestrator:process_context:158 | [Orchestrator] Collected 0 signals for WIFUSDT
+2025-12-22 14:39:44.138 | INFO     | orchestrator.orchestrator:_make_decision:263 | [Orchestrator] Using rules-based decision maker
+2025-12-22 14:39:44.138 | INFO     | orchestrator.orchestrator:process_context:184 | [Orchestrator] Decision: WAIT (source: RULES, conf: 1.00)
+2025-12-22 14:39:44.138 | INFO     | core.trading_loop:_execute_decision:464 | Decision: WAIT | Source: RULES
+2025-12-22 14:39:44.139 | INFO     | core.trading_loop:_execute_decision:467 |   Reason: No signals from agents
+2025-12-22 14:39:44.406 | INFO     | core.trading_loop:_print_status:604 | 
+Status:
+2025-12-22 14:39:44.407 | INFO     | core.trading_loop:_print_status:605 |   Balance: $434.83
+2025-12-22 14:39:44.407 | INFO     | core.trading_loop:_print_status:606 |   Exposure: $185.32 (42.6%)
+2025-12-22 14:39:44.408 | INFO     | core.trading_loop:_print_status:607 |   Unrealized PnL: $+0.21
+2025-12-22 14:39:44.408 | INFO     | core.trading_loop:_print_status:608 |   Open positions: 12
+2025-12-22 14:39:44.408 | INFO     | core.trading_loop:_print_status:609 |   Cycle: 1 | Decisions: 18 | Trades: 3
+2025-12-22 14:39:44.420 | INFO     | core.trading_loop:_print_status:614 |   Today: 0W / 14L | $-4.64
+2025-12-22 14:39:44.420 | INFO     | core.trading_loop:run:188 | Sleeping 241s until next cycle...
