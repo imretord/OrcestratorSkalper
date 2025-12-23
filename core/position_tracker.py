@@ -108,8 +108,8 @@ class PositionTracker:
             take_profit_2=signal.take_profit_2,
             entry_order_id=entry_order.order_id if entry_order else '',
             sl_order_id=sl_order.order_id if sl_order else None,
-            tp1_order_id=tp_orders[0].order_id if len(tp_orders) > 0 else None,
-            tp2_order_id=tp_orders[1].order_id if len(tp_orders) > 1 else None,
+            tp1_order_id=tp_orders[0].order_id if len(tp_orders) > 0 and tp_orders[0] else None,
+            tp2_order_id=tp_orders[1].order_id if len(tp_orders) > 1 and tp_orders[1] else None,
             status="OPEN",
             entry_regime=signal.regime_at_signal,
             entry_context=context_snapshot or {},
@@ -174,6 +174,11 @@ class PositionTracker:
             if position.status == "CLOSED":
                 continue
 
+            # Double-check position still exists (could be removed by concurrent process)
+            if symbol not in self.positions:
+                log.warning(f"[PositionTracker] {symbol} was removed mid-iteration - skipping")
+                continue
+
             try:
                 # Get both regular and algo orders for this symbol
                 regular_orders, algo_orders = self.binance_client.get_all_position_orders(symbol)
@@ -182,6 +187,27 @@ class PositionTracker:
 
                 # Check SL order (algo order)
                 if position.sl_order_id and position.sl_order_id not in open_algo_ids:
+                    # CRITICAL: Verify price actually reached SL before marking as hit
+                    # This prevents false SL triggers when orders are missing/cancelled
+                    current = position.current_price or 0
+                    sl_target = position.stop_loss or 0
+
+                    price_reached_sl = False
+                    if position.side == "LONG" and current > 0 and sl_target > 0:
+                        # For LONG, SL is below entry - price should be at or below SL
+                        price_reached_sl = current <= sl_target * 1.005  # 0.5% tolerance
+                    elif position.side == "SHORT" and current > 0 and sl_target > 0:
+                        # For SHORT, SL is above entry - price should be at or above SL
+                        price_reached_sl = current >= sl_target * 0.995  # 0.5% tolerance
+
+                    if not price_reached_sl:
+                        log.warning(
+                            f"[PositionTracker] {symbol} SL order missing but price NOT at SL! "
+                            f"Current: ${current:.6f} vs SL: ${sl_target:.6f} - skipping false trigger"
+                        )
+                        # SL order is missing - will be recreated by check_order_health
+                        continue
+
                     # SL was triggered - get ACTUAL execution price
                     actual_exit_price = self._get_actual_exit_price(
                         symbol, position.sl_order_id, is_algo=True, fallback_price=position.stop_loss
@@ -197,12 +223,36 @@ class PositionTracker:
                     self._cancel_all_position_orders(symbol, position)
 
                     self._close_position(position, "SL", actual_exit_price)
-                    closed.append(position)
+                    # Only add to closed list if actually closed (not a duplicate)
+                    if position.status == "CLOSED" and position not in closed:
+                        closed.append(position)
                     continue
 
                 # Check TP1 order (algo order)
                 if position.tp1_order_id and position.tp1_order_id not in open_algo_ids:
                     if not position.tp1_hit:
+                        # CRITICAL: Verify price actually reached TP1 before marking as hit
+                        # This prevents false TP1 triggers when orders are missing/cancelled
+                        current = position.current_price or 0
+                        tp1_target = position.take_profit_1 or 0
+
+                        price_reached_tp1 = False
+                        if position.side == "LONG" and current > 0 and tp1_target > 0:
+                            # For LONG, TP1 is above entry - price should be at or above TP1
+                            price_reached_tp1 = current >= tp1_target * 0.995  # 0.5% tolerance
+                        elif position.side == "SHORT" and current > 0 and tp1_target > 0:
+                            # For SHORT, TP1 is below entry - price should be at or below TP1
+                            price_reached_tp1 = current <= tp1_target * 1.005  # 0.5% tolerance
+
+                        if not price_reached_tp1:
+                            log.warning(
+                                f"[PositionTracker] {symbol} TP1 order missing but price NOT at TP1! "
+                                f"Current: ${current:.6f} vs TP1: ${tp1_target:.6f} - skipping false trigger"
+                            )
+                            # TP1 order is missing - need to recreate it
+                            # This will be handled by check_order_health
+                            continue
+
                         # Get actual TP1 execution price
                         actual_tp1_price = self._get_actual_exit_price(
                             symbol, position.tp1_order_id, is_algo=True, fallback_price=position.take_profit_1
@@ -287,7 +337,9 @@ class PositionTracker:
                             )
                             # Close remaining position via market order
                             self._close_trailing_position(position, current)
-                            closed.append(position)
+                            # Only add to closed list if actually closed (not a duplicate)
+                            if position.status == "CLOSED" and position not in closed:
+                                closed.append(position)
                     else:  # SHORT
                         if current < peak:
                             position.trailing_peak_price = current
@@ -301,7 +353,9 @@ class PositionTracker:
                             )
                             # Close remaining position via market order
                             self._close_trailing_position(position, current)
-                            closed.append(position)
+                            # Only add to closed list if actually closed (not a duplicate)
+                            if position.status == "CLOSED" and position not in closed:
+                                closed.append(position)
 
             except Exception as e:
                 log.warning(f"[PositionTracker] Failed to check exits for {symbol}: {e}")
@@ -465,6 +519,23 @@ class PositionTracker:
             reason: Exit reason (SL/TP1/TP2/MANUAL/EMERGENCY)
             exit_price: Exit price
         """
+        symbol = position.symbol
+
+        # CRITICAL: Prevent duplicate close processing
+        if position.status == "CLOSED":
+            log.warning(
+                f"[PositionTracker] {symbol} already has status CLOSED - "
+                f"skipping duplicate close (reason: {reason})"
+            )
+            return
+
+        if symbol not in self.positions:
+            log.warning(
+                f"[PositionTracker] {symbol} not in active positions - "
+                f"skipping duplicate close (reason: {reason})"
+            )
+            return
+
         position.status = "CLOSED"
         position.exit_reason = reason
         position.exit_time = datetime.now(timezone.utc)
@@ -508,7 +579,7 @@ class PositionTracker:
         self.closed_positions.append(position)
 
         # CRITICAL: Remove from active positions to prevent duplicate processing
-        symbol = position.symbol
+        # (symbol already defined at method start)
         if symbol in self.positions:
             del self.positions[symbol]
             log.info(f"[PositionTracker] {symbol} removed from active tracking")
@@ -580,6 +651,62 @@ class PositionTracker:
     def has_position(self, symbol: str) -> bool:
         """Check if there's an open position for a symbol."""
         return symbol in self.positions and self.positions[symbol].status != "CLOSED"
+
+    def add_untracked_position(
+        self,
+        symbol: str,
+        side: str,
+        quantity: float,
+        entry_price: float,
+        sl_order_id: str | None = None,
+    ) -> TrackedPosition:
+        """
+        Add an untracked position discovered on the exchange.
+        Used for positions that exist on Binance but not in our tracker.
+
+        Args:
+            symbol: Trading symbol
+            side: LONG or SHORT
+            quantity: Position size
+            entry_price: Entry price
+            sl_order_id: Stop loss order ID if placed
+
+        Returns:
+            TrackedPosition object
+        """
+        from core.state import MarketRegime
+
+        position = TrackedPosition(
+            id=str(uuid.uuid4()),
+            signal_id="untracked",
+            agent_name="UNTRACKED",
+            symbol=symbol,
+            side=side,
+            entry_time=datetime.now(timezone.utc),
+            entry_price=entry_price,
+            quantity=quantity,
+            position_value_usd=entry_price * quantity,
+            stop_loss=entry_price * (0.98 if side == "LONG" else 1.02),  # 2% SL estimate
+            take_profit_1=entry_price * (1.02 if side == "LONG" else 0.98),
+            take_profit_2=entry_price * (1.04 if side == "LONG" else 0.96),
+            entry_order_id="untracked",
+            sl_order_id=sl_order_id,
+            status="OPEN",
+            entry_regime=MarketRegime.RANGING,  # Default
+            entry_context={},
+            current_price=entry_price,
+            unrealized_pnl=0.0,
+            unrealized_pnl_pct=0.0,
+        )
+
+        self.positions[symbol] = position
+
+        log.info(
+            f"[PositionTracker] Added UNTRACKED position: {side} {symbol} "
+            f"@ ${entry_price:.4f}, qty={quantity:.4f}"
+        )
+
+        return position
 
     def get_position(self, symbol: str) -> TrackedPosition | None:
         """Get position for a symbol."""
@@ -997,6 +1124,52 @@ class PositionTracker:
                         else:
                             report["actions"].append(f"{symbol}: FAILED to recreate SL")
                             log.error(f"[OrderHealth] {symbol}: Failed to recreate SL order")
+
+                # Check TP1 order (only if TP1 not yet hit)
+                if not position.tp1_hit and position.tp1_order_id:
+                    tp1_exists = position.tp1_order_id in order_ids
+
+                    # Check if there's any take profit order
+                    has_any_tp = any(
+                        o.order_type and o.order_type.lower() in ('take_profit_market', 'take_profit')
+                        for o in all_orders
+                    )
+
+                    if not tp1_exists:
+                        if has_any_tp:
+                            # TP exists but with different ID - update tracking
+                            tp_order_found = next(
+                                (o for o in all_orders if o.order_type and o.order_type.lower() in ('take_profit_market', 'take_profit')),
+                                None
+                            )
+                            if tp_order_found:
+                                log.info(
+                                    f"[OrderHealth] {symbol}: TP1 exists with different ID. "
+                                    f"Expected: {position.tp1_order_id}, Found: {tp_order_found.order_id}"
+                                )
+                                position.tp1_order_id = tp_order_found.order_id
+                        else:
+                            # Need TP1 order
+                            issues_for_symbol.append("Missing TP1 order")
+                            log.warning(f"[OrderHealth] {symbol}: No TP1 order found - recreating")
+
+                            # Recreate TP1 (50% of position)
+                            exit_side = "sell" if position.side == "LONG" else "buy"
+                            tp1_qty = position.quantity / 2
+
+                            tp1_order = self.binance_client.place_take_profit(
+                                symbol=symbol,
+                                side=exit_side,
+                                quantity=tp1_qty,
+                                stop_price=position.take_profit_1,
+                            )
+                            if tp1_order:
+                                position.tp1_order_id = tp1_order.order_id
+                                report["actions"].append(f"{symbol}: Recreated TP1 @ ${position.take_profit_1:.6f}")
+                                log.info(f"[OrderHealth] {symbol}: Recreated TP1 order @ ${position.take_profit_1:.6f}, ID={tp1_order.order_id}")
+                            else:
+                                report["actions"].append(f"{symbol}: FAILED to recreate TP1")
+                                log.error(f"[OrderHealth] {symbol}: Failed to recreate TP1 order")
 
                 # Check trailing stop (only if TP1 hit and trailing active)
                 if position.tp1_hit and position.trailing_stop_active:

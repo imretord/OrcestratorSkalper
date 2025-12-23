@@ -165,6 +165,23 @@ class RiskGuardian:
         vol_scale = self.VOLATILITY_SCALE.get(
             context.regime.volatility_level, 1.0
         )
+
+        # BLOCK trades in extreme volatility with choppy/ranging regime (stop hunting conditions)
+        if context.regime.volatility_level == "extreme" and context.regime.regime in [
+            MarketRegime.CHOPPY, MarketRegime.RANGING
+        ]:
+            return self._block_decision(
+                decision,
+                f"Extreme volatility in {context.regime.regime.value} regime - stop hunting risk",
+            )
+
+        # BLOCK trades in high volatility with choppy regime
+        if context.regime.volatility_level == "high" and context.regime.regime == MarketRegime.CHOPPY:
+            return self._block_decision(
+                decision,
+                "High volatility in choppy regime - whipsaw risk",
+            )
+
         if vol_scale < 1.0 and decision.position_size_usd:
             original = decision.position_size_usd
             decision.position_size_usd *= vol_scale

@@ -36,16 +36,18 @@ class BaseAgent(ABC):
     """
 
     # ATR multipliers for stop-loss by regime
+    # INCREASED 2024-12-22: 100% of SL trades were in profit before being stopped
+    # Need wider stops to avoid being stopped out by noise
     ATR_MULTIPLIERS = {
-        MarketRegime.STRONG_UPTREND: 1.5,
-        MarketRegime.WEAK_UPTREND: 2.0,
-        MarketRegime.STRONG_DOWNTREND: 1.5,
-        MarketRegime.WEAK_DOWNTREND: 2.0,
-        MarketRegime.RANGING: 1.5,
-        MarketRegime.CHOPPY: 2.5,  # Wider in chaos
-        MarketRegime.COMPRESSION: 2.0,  # Wider to avoid false breakout noise (was 1.5)
-        MarketRegime.BREAKOUT_UP: 1.5,
-        MarketRegime.BREAKOUT_DOWN: 1.5,
+        MarketRegime.STRONG_UPTREND: 2.0,   # Was 1.5
+        MarketRegime.WEAK_UPTREND: 2.5,     # Was 2.0
+        MarketRegime.STRONG_DOWNTREND: 2.0, # Was 1.5
+        MarketRegime.WEAK_DOWNTREND: 2.5,   # Was 2.0
+        MarketRegime.RANGING: 2.0,          # Was 1.5
+        MarketRegime.CHOPPY: 3.0,           # Was 2.5 - wider in chaos
+        MarketRegime.COMPRESSION: 2.5,      # Was 2.0
+        MarketRegime.BREAKOUT_UP: 2.0,      # Was 1.5
+        MarketRegime.BREAKOUT_DOWN: 2.0,    # Was 1.5
     }
 
     def __init__(

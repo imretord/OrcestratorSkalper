@@ -19,6 +19,7 @@ from sensors.aggregator import StateAggregator
 from analyzers.market_context import MarketContextBuilder
 from orchestrator.orchestrator import Orchestrator
 from storage.trade_journal import TradeJournal
+from storage.state_persistence import StatePersistence
 from notifications.telegram import TelegramNotifier
 
 log = get_logger("trading_loop")
@@ -50,6 +51,7 @@ class TradingLoop:
         telegram: TelegramNotifier,
         symbols: list[str],
         interval_seconds: int = 300,
+        state_persistence: StatePersistence | None = None,
     ) -> None:
         """
         Initialize Trading Loop.
@@ -65,6 +67,7 @@ class TradingLoop:
             telegram: Telegram notifier
             symbols: Symbols to trade
             interval_seconds: Seconds between analysis cycles
+            state_persistence: State persistence for saving positions
         """
         self.binance_client = binance_client
         self.orchestrator = orchestrator
@@ -76,6 +79,7 @@ class TradingLoop:
         self.telegram = telegram
         self.symbols = symbols
         self.interval_seconds = interval_seconds
+        self.state_persistence = state_persistence
 
         # State
         self.running = False
@@ -410,6 +414,11 @@ class TradingLoop:
             # Learn from trade
             await self._learn_from_trade(position)
 
+        # Save state after processing closed positions
+        if closed and self.state_persistence:
+            self.state_persistence.save_positions(self.position_tracker)
+            log.info(f"[State] Saved positions after closing {len(closed)} position(s)")
+
     async def _analyze_and_decide(self) -> None:
         """Collect data, analyze, and execute decisions."""
         # Collect market data
@@ -532,6 +541,11 @@ class TradingLoop:
                     f"Confidence: {signal.confidence:.0%}"
                 )
                 await self.telegram.send_message(message)
+
+                # CRITICAL: Save state after each trade to prevent position loss on crash
+                if self.state_persistence:
+                    self.state_persistence.save_positions(self.position_tracker)
+                    log.info(f"[State] Saved positions after opening {signal.symbol}")
 
             else:
                 log.info(f"  ✗ Not executed: {result['reason']}")
@@ -709,14 +723,31 @@ class TradingLoop:
             amount = pos_info['amount']
 
             try:
-                # Calculate SL at 2% from entry
-                sl_pct = 0.02
+                # Get current price to calculate valid SL
+                current_price = self.binance_client.get_current_price(symbol)
+
+                # Calculate SL at 2% from entry OR 1% from current price (whichever is further)
+                # This prevents "Order would immediately trigger" errors
+                sl_from_entry_pct = 0.02
+                sl_from_current_pct = 0.01  # Minimum 1% from current
+
                 if side == 'LONG':
-                    sl_price = entry_price * (1 - sl_pct)
+                    sl_from_entry = entry_price * (1 - sl_from_entry_pct)
+                    sl_from_current = current_price * (1 - sl_from_current_pct)
+                    # Use the lower of the two (more protection)
+                    sl_price = min(sl_from_entry, sl_from_current)
                     exit_side = 'sell'
-                else:
-                    sl_price = entry_price * (1 + sl_pct)
+                else:  # SHORT
+                    sl_from_entry = entry_price * (1 + sl_from_entry_pct)
+                    sl_from_current = current_price * (1 + sl_from_current_pct)
+                    # Use the higher of the two (more protection)
+                    sl_price = max(sl_from_entry, sl_from_current)
                     exit_side = 'buy'
+
+                log.info(
+                    f"[Protection] {symbol}: Calculating SL for {side} | "
+                    f"Entry: ${entry_price:.6f}, Current: ${current_price:.6f}, SL: ${sl_price:.6f}"
+                )
 
                 # Place SL order
                 sl_order = self.binance_client.place_stop_loss(
@@ -730,6 +761,17 @@ class TradingLoop:
                     log.info(
                         f"[Protection] {symbol}: Added SL @ ${sl_price:.6f} for {side} {amount:.4f}"
                     )
+
+                    # CRITICAL: Add position to tracker to prevent duplicate trades!
+                    self.position_tracker.add_untracked_position(
+                        symbol=symbol,
+                        side=side.upper(),
+                        quantity=amount,
+                        entry_price=entry_price,
+                        sl_order_id=sl_order.order_id if sl_order else None,
+                    )
+                    log.info(f"[Protection] {symbol}: Added to position tracker")
+
                     await self.telegram.send_message(
                         f"🛡️ Protection Added\n"
                         f"Symbol: {symbol}\n"

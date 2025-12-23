@@ -30,8 +30,9 @@ class BreakoutCatcherAgent(BaseAgent):
     Avoids: Established trends, choppy markets
     """
 
+    # DISABLED COMPRESSION - 0% win rate in testing (all trades hit SL)
+    # Only trade confirmed breakouts now
     SUITABLE_REGIMES = [
-        MarketRegime.COMPRESSION,
         MarketRegime.BREAKOUT_UP,
         MarketRegime.BREAKOUT_DOWN,
     ]

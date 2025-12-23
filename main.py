@@ -1094,6 +1094,7 @@ async def run_trading(mode: str = "shadow") -> None:
         telegram=telegram,
         symbols=DEFAULT_SYMBOLS,
         interval_seconds=300,  # 5 minutes
+        state_persistence=state_persistence,  # Save state after each trade
     )
 
     print_success("Trading loop ready")

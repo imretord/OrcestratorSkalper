@@ -42,7 +42,7 @@ class TradeExecutor:
         # Tier 2: Medium minimums
         "DOTUSDT": {"min": 0.1, "step": 0.1, "price_step": 0.001, "min_notional": 5},
         "LINKUSDT": {"min": 0.1, "step": 0.1, "price_step": 0.001, "min_notional": 5},
-        "AVAXUSDT": {"min": 0.1, "step": 0.1, "price_step": 0.01, "min_notional": 5},
+        "AVAXUSDT": {"min": 1, "step": 1, "price_step": 0.01, "min_notional": 5},
         "NEARUSDT": {"min": 0.1, "step": 0.1, "price_step": 0.001, "min_notional": 5},
         # Tier 3: Popular alts
         "SUIUSDT": {"min": 0.1, "step": 0.1, "price_step": 0.0001, "min_notional": 5},
@@ -287,7 +287,8 @@ class TradeExecutor:
         log.info(f"[EXECUTE] Entry filled @ ${actual_entry_price:.4f}")
 
         # Wait for position to register on exchange before placing SL/TP
-        await asyncio.sleep(0.5)
+        # Binance needs time to register the position before GTE orders can be placed
+        await asyncio.sleep(1.0)
 
         # 2. Recalculate levels based on actual entry
         sl_price, tp1_price, tp2_price = self._recalculate_levels(
@@ -336,8 +337,12 @@ class TradeExecutor:
                     quantity=tp1_qty,
                     tp_price=tp1_price,
                 )
-                tp_orders.append(tp1_order)
-                log.info(f"[EXECUTE] TP1 set @ ${tp1_price:.4f} ({tp1_qty:.4f})")
+                # Only append if order was successfully created
+                if tp1_order is not None:
+                    tp_orders.append(tp1_order)
+                    log.info(f"[EXECUTE] TP1 set @ ${tp1_price:.4f} ({tp1_qty:.4f})")
+                else:
+                    log.warning(f"[EXECUTE] TP1 order returned None for {symbol}")
             except Exception as e:
                 log.error(f"[EXECUTE] Failed to place TP1: {e}")
 
